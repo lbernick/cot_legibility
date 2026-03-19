@@ -1,9 +1,11 @@
 run:
+  name: 20251017_172954_qwq_gpqa
   stages:
-  - inference
-  - evaluation
-  - prefill
-  - analysis
+  # - inference
+  # - evaluation
+  # - prefill
+  # - analysis
+  - rollouts
 inference:
   models:
   - name: qwq
@@ -13,9 +15,9 @@ inference:
     reasoning_budget_tokens: 30000
     provider: openrouter
     model_id: qwen/qwq-32b
-    openrouter_provider:
-    - deepinfra/bf16
-    - nebius/fp8
+    # openrouter_provider:
+    # - deepinfra/bf16
+    # - nebius/fp8
   datasets:
   - name: gpqa
     num_questions: 100
@@ -50,3 +52,7 @@ analysis:
   - summary
   comparison:
     enabled: false
+rollouts:
+  samples_per_chunk: 1
+  force_answer: false
+  max_workers: 1

@@ -57,6 +57,14 @@ def run_prefill(config: dict, output_dir: Path, logger) -> None:
     logger.info("Prefill stage complete")
 
 
+def run_rollout(config: dict, output_dir: Path, logger) -> None:
+    from .inference.rollout_runner import run_rollout_stage
+
+    logger.info("Starting rollout stage")
+    run_rollout_stage(config, output_dir, logger)
+    logger.info("Rollout stage complete")
+
+
 def run_prefill_evaluation(config: dict, output_dir: Path, logger) -> None:
     from .evaluation.prefill_grader import run_prefill_evaluation_stage
 
@@ -110,6 +118,9 @@ def main(config_path: str) -> None:
                     run_prefill(config, output_dir, logger)
                     run_prefill_evaluation(config, output_dir, logger)
 
+                if "rollouts" in stages:
+                    run_rollout(config, output_dir, logger)
+
                 if "analysis" in stages:
                     run_analysis(config, output_dir, logger)
 
@@ -117,7 +128,7 @@ def main(config_path: str) -> None:
     else:
         run_name = generate_run_name(config)
         output_dir = ensure_dir(Path("runs") / run_name)
-        save_config(config, output_dir / "config.yaml")
+        # save_config(config, output_dir / "config.yaml")
         setup_logging(output_dir / "run.log")
         logger = get_logger(__name__)
 
@@ -130,6 +141,9 @@ def main(config_path: str) -> None:
         if "prefill" in stages:
             run_prefill(config, output_dir, logger)
             run_prefill_evaluation(config, output_dir, logger)
+
+        if "rollouts" in stages:
+            run_rollout(config, output_dir, logger)
 
         if "analysis" in stages:
             run_analysis(config, output_dir, logger)

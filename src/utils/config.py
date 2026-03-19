@@ -30,7 +30,7 @@ def _validate_config(config: dict) -> None:
     if not stages:
         raise ValueError("Must specify at least one stage in run.stages")
 
-    valid_stages = {"inference", "evaluation", "analysis", "prefill"}
+    valid_stages = {"inference", "evaluation", "analysis", "prefill", "rollouts"}
     invalid = set(stages) - valid_stages
     if invalid:
         raise ValueError(f"Invalid stages: {invalid}. Must be one of {valid_stages}")
@@ -52,6 +52,12 @@ def _validate_config(config: dict) -> None:
             raise ValueError("prefill stage specified but no prefill config provided")
         if "evaluation" not in stages and not config["prefill"].get("evaluation_file"):
             raise ValueError("prefill stage requires evaluation stage or prefill.evaluation_file")
+
+    if "rollouts" in stages:
+        if "rollouts" not in config:
+            raise ValueError("rollouts stage specified but no rollouts config provided")
+        # if "evaluation" not in stages and "inference" not in stages:
+        #     raise ValueError("rollouts stage requires a prior evaluation (run with evaluation/inference stages or point at an existing run)")
 
 
 def _set_defaults(config: dict) -> None:
@@ -87,6 +93,12 @@ def _set_defaults(config: dict) -> None:
         pf.setdefault("legibility_threshold", 7)
         pf.setdefault("include_reasoning", False)
         pf.setdefault("max_workers", 30)
+
+    if "rollouts" in config:
+        ro = config["rollouts"]
+        ro.setdefault("samples_per_chunk", 3)
+        ro.setdefault("force_answer", True)
+        ro.setdefault("max_workers", 30)
 
 
 def _resolve_models(config: dict) -> None:
