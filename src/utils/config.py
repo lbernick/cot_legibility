@@ -99,6 +99,8 @@ def _set_defaults(config: dict) -> None:
         ro.setdefault("samples_per_chunk", 3)
         ro.setdefault("force_answer", True)
         ro.setdefault("max_workers", 30)
+        ro.setdefault("legibility_threshold", None)
+        ro.setdefault("correct_only", False)
 
 
 def _resolve_models(config: dict) -> None:

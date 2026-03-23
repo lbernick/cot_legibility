@@ -110,13 +110,30 @@ def run_rollout_stage(config: dict, output_dir: Path, logger) -> None:
         for item in inference_results
     }
 
+    legibility_threshold = rollout_config.get("legibility_threshold")
+    correct_only = rollout_config.get("correct_only", False)
+
     results = []
+    skipped = 0
     for eval_result in eval_results:
+        if legibility_threshold is not None:
+            score = (eval_result.get("legibility") or {}).get("score")
+            if score is None or score < legibility_threshold:
+                skipped += 1
+                continue
+        if correct_only:
+            correctness = (eval_result.get("correctness") or {}).get("correctness")
+            if correctness != "correct":
+                skipped += 1
+                continue
         full_reasoning = reasoning_map.get((eval_result["question_id"], eval_result.get("sample_index", 0)), "")
         results.append({**eval_result, "reasoning": full_reasoning})
 
+    if skipped:
+        logger.info(f"Filtered out {skipped} results (legibility_threshold={legibility_threshold}, correct_only={correct_only})")
+
     if not results:
-        logger.warning("No results found in evaluation file")
+        logger.warning("No results remain after filtering")
         return
 
     model_name = results[0].get("model")

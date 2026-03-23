@@ -36,9 +36,9 @@ class OpenRouterProvider(Provider):
         if "openrouter_provider" in model_config:
             provider_config = model_config["openrouter_provider"]
             if isinstance(provider_config, str):
-                extra_body["provider"] = {"order": [provider_config], "allow_fallbacks": False}
+                extra_body["provider"] = {"order": [provider_config], "allow_fallbacks": True}
             elif isinstance(provider_config, list):
-                extra_body["provider"] = {"order": provider_config, "allow_fallbacks": False}
+                extra_body["provider"] = {"order": provider_config, "allow_fallbacks": True}
             elif isinstance(provider_config, dict):
                 extra_body["provider"] = provider_config
 
