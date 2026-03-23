@@ -14,3 +14,4 @@ torch
 transformers
 plotly
 sentence-transformers
+ipykernel
