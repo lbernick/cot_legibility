@@ -9,3 +9,7 @@ pyyaml
 tqdm
 streamlit
 scipy
+nbformat
+torch
+transformers
+plotly

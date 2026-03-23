@@ -21,7 +21,7 @@ def grade_item(item: dict, grader: Grader) -> dict:
     result = {k: item.get(k) for k in (
         "question_id", "sample_index", "dataset", "question",
         "correct_answer", "original_answer", "original_correctness",
-        "prefill_answer", "chunk_index", "rollout_index", "timestamp", "metadata",
+        "prefill_answer", "chunk_index", "rollout_index", "timestamp", "metadata", "chunk"
     )}
 
     predicted = item.get("prefill_answer", "")
