@@ -99,6 +99,7 @@ def main(input_file: Path, output_file: Path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Grade counterfactual rollout results")
     parser.add_argument("--input", help="Input JSON file")
-    parser.add_argument("--output", help="Output JSON file")
     args = parser.parse_args()
-    main(Path(args.input), Path(args.output))
+    input_path = Path(args.input)
+    output_path = input_path.parent / (input_path.stem + "_graded" + input_path.suffix)
+    main(input_path, output_path)

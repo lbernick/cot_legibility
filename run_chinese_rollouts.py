@@ -108,8 +108,7 @@ def process_rollout(
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="chinese_correct_results.json")
-    parser.add_argument("--output", default="chinese_rollout_results.json")
+    parser.add_argument("--results_dir", required=True)
     parser.add_argument("--samples_per_chunk", type=int, required=True)
     parser.add_argument("--chunk_size", type=int, required=True)
     parser.add_argument(
@@ -118,7 +117,12 @@ def main():
     parser.add_argument("--max_workers", type=int, default=20)
     args = parser.parse_args()
 
-    results = json.loads(Path(args.input).read_text())
+    results_dir = Path(args.results_dir)
+    input_path = results_dir / "original_answer.json"
+    output_filename = "forced_answer.json" if args.force_answer else "counterfactual.json"
+    output_path = results_dir / output_filename
+
+    results = json.loads(input_path.read_text())
 
     inference_config = results[0]["inference_config"]
     model_name = results[0]["model"]
@@ -142,7 +146,7 @@ def main():
         f"Running {len(tasks)} rollouts ({len(results)} samples, avg {len(tasks) / len(results):.1f} chunks/sample)"
     )
 
-    tmp_path = Path(args.output).with_suffix(".jsonl")
+    tmp_path = output_path.with_suffix(".jsonl")
     with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = [
             executor.submit(
@@ -170,7 +174,7 @@ def main():
 
     all_results = list(read_jsonl(tmp_path))
     write_json(
-        args.output,
+        output_path,
         {
             "config": vars(args),
             "model_config": model_config,
@@ -178,7 +182,7 @@ def main():
         },
     )
     tmp_path.unlink()
-    print(f"Done. {len(all_results)} results written to {args.output}")
+    print(f"Done. {len(all_results)} results written to {output_path}")
 
 
 if __name__ == "__main__":
