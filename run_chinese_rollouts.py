@@ -54,6 +54,10 @@ def process_rollout(
     provider,
     force_answer: bool,
 ) -> dict:
+    if chunk_index != -1:
+        chunk = chunks[chunk_index]
+    else:
+        chunk = ""
     base = {
         "question_id": result["question_id"],
         "run": result.get("run"),
@@ -63,6 +67,7 @@ def process_rollout(
         "correct_answer": result.get("correct_answer"),
         "original_answer": result.get("answer"),
         "original_correctness": result.get("correctness", {}).get("correctness"),
+        "chunk": chunk,
         "chunk_index": chunk_index,
         "rollout_index": rollout_index,
         "timestamp": datetime.utcnow().isoformat() + "Z",
