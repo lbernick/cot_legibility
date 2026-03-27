@@ -254,7 +254,16 @@ def load_results_for_runs(run_names):
 
 @st.cache_data(ttl=300)
 def load_chinese_cot_data():
-    path = Path("chinese_correct_results.json")
+    path = Path("chinese_correct/chinese_correct_results.json")
+    if not path.exists():
+        return []
+    with open(path) as f:
+        return json.load(f)
+
+
+@st.cache_data(ttl=300)
+def load_selected_qwq_data():
+    path = Path("selected_qwq/original_answer.json")
     if not path.exists():
         return []
     with open(path) as f:
@@ -266,7 +275,9 @@ df = load_runs_metadata()
 st.title("CoT Legibility Explorer")
 st.markdown("---")
 
-tab1, tab2 = st.tabs(["Legibility Explorer", "Chinese CoT Viewer"])
+tab1, tab2, tab3 = st.tabs(
+    ["Legibility Explorer", "Chinese CoT Viewer", "Selected QwQ CoTs"]
+)
 
 with tab1:
     if df.empty:
@@ -274,9 +285,14 @@ with tab1:
     else:
         st.subheader("Model")
         all_models = sorted(df["model_display"].unique().tolist())
-        if "dataset" in st.session_state and st.session_state.dataset != "Select a dataset...":
+        if (
+            "dataset" in st.session_state
+            and st.session_state.dataset != "Select a dataset..."
+        ):
             available_models = sorted(
-                df[df["dataset"] == st.session_state.dataset]["model_display"].unique().tolist()
+                df[df["dataset"] == st.session_state.dataset]["model_display"]
+                .unique()
+                .tolist()
             )
             model_options = ["Select a model..."] + available_models
         else:
@@ -298,14 +314,18 @@ with tab1:
             "Dataset", dataset_options, label_visibility="collapsed", key="dataset"
         )
 
-        if selected_model != "Select a model..." and selected_dataset != "Select a dataset...":
+        if (
+            selected_model != "Select a model..."
+            and selected_dataset != "Select a dataset..."
+        ):
             current_selection = (selected_model, selected_dataset)
             if st.session_state.get("last_selection") != current_selection:
                 st.session_state.selected_question_idx = None
                 st.session_state.last_selection = current_selection
 
             run_data = df[
-                (df["model_display"] == selected_model) & (df["dataset"] == selected_dataset)
+                (df["model_display"] == selected_model)
+                & (df["dataset"] == selected_dataset)
             ]
 
             if run_data.empty:
@@ -332,7 +352,9 @@ with tab1:
                 with col5:
                     st.metric("Incorrect", f"{run['incorrect_pct']:.1f}%")
 
-                st.caption(f"Combined from {len(run['runs'])} run(s): {', '.join(run['runs'])}")
+                st.caption(
+                    f"Combined from {len(run['runs'])} run(s): {', '.join(run['runs'])}"
+                )
 
                 with st.spinner("Loading results..."):
                     results = load_results_for_runs(tuple(run["runs"]))
@@ -345,7 +367,9 @@ with tab1:
 
                     legibility_scores = [get_legibility_score(r) for r in results]
                     bins = [i + 0.5 for i in range(0, 10)]
-                    ax.hist(legibility_scores, bins=bins, color="#87CEEB", edgecolor="black")
+                    ax.hist(
+                        legibility_scores, bins=bins, color="#87CEEB", edgecolor="black"
+                    )
                     ax.set_xlabel("Legibility Score (1=legible, 9=illegible)")
                     ax.set_ylabel("Count")
                     ax.set_title("Legibility Score Distribution")
@@ -360,8 +384,12 @@ with tab1:
                 st.subheader("Questions")
 
                 with st.expander("Filters", expanded=True):
-                    min_leg = float(min(legibility_scores) if legibility_scores else 1.0)
-                    max_leg = float(max(legibility_scores) if legibility_scores else 9.0)
+                    min_leg = float(
+                        min(legibility_scores) if legibility_scores else 1.0
+                    )
+                    max_leg = float(
+                        max(legibility_scores) if legibility_scores else 9.0
+                    )
                     min_leg = max(1.0, min(min_leg, 9.0))
                     max_leg = max(1.0, min(max_leg, 9.0))
 
@@ -382,7 +410,9 @@ with tab1:
                 filtered_results = [
                     r
                     for r in results
-                    if legibility_range[0] <= get_legibility_score(r) <= legibility_range[1]
+                    if legibility_range[0]
+                    <= get_legibility_score(r)
+                    <= legibility_range[1]
                     and get_correctness(r) in correctness_options
                 ]
 
@@ -405,7 +435,7 @@ with tab1:
 
                     table_data = []
                     for i, result in enumerate(filtered_results):
-                        qid = result.get("question_id", f"Question {i+1}")
+                        qid = result.get("question_id", f"Question {i + 1}")
 
                         if search_query:
                             searchable_text = " ".join(
@@ -415,8 +445,16 @@ with tab1:
                                     str(result.get("reasoning", "")),
                                     str(result.get("answer", "")),
                                     str(result.get("correct_answer", "")),
-                                    str(result.get("legibility", {}).get("explanation", "")),
-                                    str(result.get("correctness", {}).get("explanation", "")),
+                                    str(
+                                        result.get("legibility", {}).get(
+                                            "explanation", ""
+                                        )
+                                    ),
+                                    str(
+                                        result.get("correctness", {}).get(
+                                            "explanation", ""
+                                        )
+                                    ),
                                 ]
                             ).lower()
 
@@ -453,7 +491,9 @@ with tab1:
                         selection_mode="single-row",
                     )
 
-                    st.caption("Click the checkbox on the left of a row to view details")
+                    st.caption(
+                        "Click the checkbox on the left of a row to view details"
+                    )
 
                     if (
                         event.selection
@@ -461,15 +501,17 @@ with tab1:
                         and len(event.selection["rows"]) > 0
                     ):
                         selected_row = event.selection["rows"][0]
-                        st.session_state.selected_question_idx = table_df.iloc[selected_row][
-                            "original_index"
-                        ]
+                        st.session_state.selected_question_idx = table_df.iloc[
+                            selected_row
+                        ]["original_index"]
 
                     if st.session_state.selected_question_idx is not None:
                         st.markdown("---")
                         st.subheader("Question Details")
 
-                        result = filtered_results[st.session_state.selected_question_idx]
+                        result = filtered_results[
+                            st.session_state.selected_question_idx
+                        ]
 
                         st.markdown("#### Question")
                         st.write(result.get("question", "N/A"))
@@ -502,12 +544,16 @@ with tab1:
                         with col1:
                             st.markdown("**Legibility**")
                             st.write(f"Score: {get_legibility_score(result):.2f}")
-                            st.write(result.get("legibility", {}).get("explanation", "N/A"))
+                            st.write(
+                                result.get("legibility", {}).get("explanation", "N/A")
+                            )
 
                         with col2:
                             st.markdown("**Correctness**")
                             st.write(f"Grade: {get_correctness(result)}")
-                            st.write(result.get("correctness", {}).get("explanation", "N/A"))
+                            st.write(
+                                result.get("correctness", {}).get("explanation", "N/A")
+                            )
                 else:
                     st.info("No questions match the selected filters")
 
@@ -519,7 +565,9 @@ with tab2:
     else:
         datasets = sorted({r.get("dataset", "unknown") for r in chinese_data})
         tokens_list = [r.get("metadata", {}).get("tokens") or 0 for r in chinese_data]
-        duration_list = [r.get("metadata", {}).get("duration_ms") or 0 for r in chinese_data]
+        duration_list = [
+            r.get("metadata", {}).get("duration_ms") or 0 for r in chinese_data
+        ]
 
         col1, col2, col3, col4 = st.columns(4)
         with col1:
@@ -527,9 +575,17 @@ with tab2:
         with col2:
             st.metric("Datasets", len(datasets))
         with col3:
-            st.metric("Avg Tokens", f"{sum(tokens_list) / len(tokens_list):.0f}" if tokens_list else "N/A")
+            st.metric(
+                "Avg Tokens",
+                f"{sum(tokens_list) / len(tokens_list):.0f}" if tokens_list else "N/A",
+            )
         with col4:
-            st.metric("Avg Duration (s)", f"{sum(duration_list) / len(duration_list) / 1000:.1f}" if duration_list else "N/A")
+            st.metric(
+                "Avg Duration (s)",
+                f"{sum(duration_list) / len(duration_list) / 1000:.1f}"
+                if duration_list
+                else "N/A",
+            )
 
         st.markdown("---")
 
@@ -540,21 +596,27 @@ with tab2:
             )
         with col3:
             chinese_search = st.text_input(
-                "Search", placeholder="Search questions & reasoning...", key="chinese_search"
+                "Search",
+                placeholder="Search questions & reasoning...",
+                key="chinese_search",
             )
 
         filtered = [
-            r for r in chinese_data
+            r
+            for r in chinese_data
             if (dataset_filter == "All" or r.get("dataset") == dataset_filter)
             and (
                 not chinese_search
-                or chinese_search.lower() in " ".join([
-                    str(r.get("question_id", "")),
-                    str(r.get("question", "")),
-                    str(r.get("reasoning", "")),
-                    str(r.get("answer", "")),
-                    str(r.get("correct_answer", "")),
-                ]).lower()
+                or chinese_search.lower()
+                in " ".join(
+                    [
+                        str(r.get("question_id", "")),
+                        str(r.get("question", "")),
+                        str(r.get("reasoning", "")),
+                        str(r.get("answer", "")),
+                        str(r.get("correct_answer", "")),
+                    ]
+                ).lower()
             )
         ]
 
@@ -633,5 +695,168 @@ with tab2:
                     f"Duration: {meta.get('duration_ms', 0) / 1000:.1f}s | "
                     f"Run: {result.get('run', 'N/A')}"
                 )
+        else:
+            st.info("No results match the selected filters")
+
+with tab3:
+    qwq_data = load_selected_qwq_data()
+
+    if not qwq_data:
+        st.error("selected_qwq/selected_cots_results.json not found")
+    else:
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Total Samples", len(qwq_data))
+        with col2:
+            st.metric(
+                "Legible",
+                sum(1 for r in qwq_data if r.get("legibility_label") == "low"),
+            )
+        with col3:
+            st.metric(
+                "Illegible",
+                sum(1 for r in qwq_data if r.get("legibility_label") == "high"),
+            )
+
+        st.markdown("---")
+
+        col1, col2, col3 = st.columns([1, 1, 1.5])
+        with col1:
+            correctness_filter = st.multiselect(
+                "Correctness",
+                options=["correct", "partially_correct", "incorrect"],
+                default=["correct", "partially_correct", "incorrect"],
+                key="qwq_correctness",
+            )
+        with col2:
+            legibility_filter = st.multiselect(
+                "Legibility Label",
+                options=["high", "medium", "low"],
+                default=["high", "medium", "low"],
+                key="qwq_legibility",
+            )
+        with col3:
+            qwq_search = st.text_input(
+                "Search",
+                placeholder="Search questions & reasoning...",
+                key="qwq_search",
+            )
+
+        filtered_qwq = [
+            r
+            for r in qwq_data
+            if r.get("correctness") in correctness_filter
+            and r.get("legibility_label") in legibility_filter
+            and (
+                not qwq_search
+                or qwq_search.lower()
+                in " ".join(
+                    [
+                        str(r.get("question_id", "")),
+                        str(r.get("question", "")),
+                        str(r.get("reasoning", "")),
+                        str(r.get("answer", "")),
+                        str(r.get("correct_answer", "")),
+                    ]
+                ).lower()
+            )
+        ]
+
+        table_rows = [
+            {
+                "ID": r.get("question_id", ""),
+                # "Sample": r.get("sample_index", 0),
+                # "Run": r.get("run", ""),
+                "Legibility Score": f"{r.get('legibility_score', 0):.2f}",
+                "Composite Illegibility": f"{r.get('composite_illegibility', 0):.2f}",
+                "Illegibility Label": r.get("legibility_label", ""),
+                "Correctness": CORRECTNESS_DISPLAY.get(
+                    r.get("correctness", "unknown"), "? Unknown"
+                ),
+                "Non-Latin Chars": r.get("reasoning_non_latin_chars", 0),
+                "_idx": i,
+            }
+            for i, r in enumerate(filtered_qwq)
+        ]
+
+        if table_rows:
+            table_df = pd.DataFrame(table_rows)
+            event = st.dataframe(
+                table_df[
+                    [
+                        "ID",
+                        #"Sample",
+                        #"Run",
+                        "Legibility Score",
+                        "Composite Illegibility",
+                        "Illegibility Label",
+                        "Correctness",
+                        "Non-Latin Chars",
+                    ]
+                ],
+                width="stretch",
+                hide_index=True,
+                height=400,
+                on_select="rerun",
+                selection_mode="single-row",
+            )
+            st.caption("Click the checkbox on the left of a row to view details")
+
+            if (
+                event.selection
+                and "rows" in event.selection
+                and len(event.selection["rows"]) > 0
+            ):
+                st.session_state.qwq_selected_idx = table_df.iloc[
+                    event.selection["rows"][0]
+                ]["_idx"]
+
+            idx = st.session_state.get("qwq_selected_idx")
+            if idx is not None and idx < len(filtered_qwq):
+                result = filtered_qwq[idx]
+                st.markdown("---")
+                st.subheader("Question Details")
+                st.caption(
+                    f"Run: {result.get('run', 'N/A')} | Sample: {result.get('sample_index', 0)}"
+                )
+
+                st.markdown("#### Question")
+                st.write(result.get("question", "N/A"))
+
+                st.markdown("#### Expected Answer")
+                st.write(result.get("correct_answer", "N/A"))
+
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.markdown("#### Model Reasoning")
+                    st.text_area(
+                        "Reasoning",
+                        result.get("reasoning", "N/A"),
+                        height=400,
+                        key=f"qwq_reasoning_{result.get('question_id')}_{result.get('sample_index', 0)}",
+                        label_visibility="collapsed",
+                    )
+                with col2:
+                    st.markdown("#### Model Answer")
+                    st.text_area(
+                        "Answer",
+                        result.get("answer", "N/A"),
+                        height=400,
+                        key=f"qwq_answer_{result.get('question_id')}_{result.get('sample_index', 0)}",
+                        label_visibility="collapsed",
+                    )
+
+                st.markdown("#### Scores")
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.markdown("**Legibility**")
+                    st.write(
+                        f"Score: {result.get('legibility_score', 0):.2f} ({result.get('legibility_label', 'N/A')})"
+                    )
+                    st.write(result.get("legibility_explanation", "N/A"))
+                with col2:
+                    st.markdown("**Correctness**")
+                    st.write(f"Grade: {result.get('correctness', 'N/A')}")
+                    st.write(result.get("correctness_explanation", "N/A"))
         else:
             st.info("No results match the selected filters")

@@ -12,7 +12,9 @@ from src.inference.providers import get_provider
 from src.utils.io import append_jsonl, read_jsonl, write_json
 
 
-def split_solution_into_chunks(text: str, min_chunk_length: int = 10, replace_newlines: bool=False) -> list[str]:
+def split_solution_into_chunks(
+    text: str, min_chunk_length: int = 10, replace_newlines: bool = False
+) -> list[str]:
     if not text:
         return []
     if "<think>" in text:
@@ -66,7 +68,8 @@ def process_rollout(
         "question": result["question"],
         "correct_answer": result.get("correct_answer"),
         "original_answer": result.get("answer"),
-        "original_correctness": result.get("correctness", {}).get("correctness"),
+        # "original_correctness": result.get("correctness", {}).get("correctness"),
+        "original_correctness": result.get("correctness"),
         "chunk": chunk,
         "chunk_index": chunk_index,
         "rollout_index": rollout_index,
@@ -110,7 +113,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--results_dir", required=True)
     parser.add_argument("--samples_per_chunk", type=int, required=True)
-    parser.add_argument("--chunk_size", type=int, required=True)
+    parser.add_argument("--chunk_size", type=int, default=None)
     parser.add_argument(
         "--force_answer", action=argparse.BooleanOptionalAction, default=False
     )
@@ -119,26 +122,43 @@ def main():
 
     results_dir = Path(args.results_dir)
     input_path = results_dir / "original_answer.json"
-    output_filename = "forced_answer.json" if args.force_answer else "counterfactual.json"
+    output_filename = (
+        "forced_answer.json" if args.force_answer else "counterfactual.json"
+    )
     output_path = results_dir / output_filename
 
     results = json.loads(input_path.read_text())
 
-    inference_config = results[0]["inference_config"]
-    model_name = results[0]["model"]
-    model_config = next(
-        m for m in inference_config["models"] if m["name"] == model_name
-    )
+    # inference_config = results[0]["inference_config"]
+    # model_name = results[0]["model"]
+    # model_config = next(
+    #     m for m in inference_config["models"] if m["name"] == model_name
+    # )
+    model_config = {
+        "name": "qwq",
+        "temperature": 1.0,
+        # "include_reasoning": True,
+        "max_tokens": 100000,
+        "reasoning_budget_tokens": 30000,
+        "provider": "openrouter",
+        "model_id": "qwen/qwq-32b",
+        "openrouter_provider": ["deepinfra/bf16", "nebius/fp8"],
+    }
     model_config = {**model_config, "include_reasoning": False}
 
     provider = get_provider(model_config["provider"])
 
     tasks = []
     for result in results:
-        chunks = split_solution_into_chunks(
-            result.get("reasoning", ""), min_chunk_length=args.chunk_size
-        )
-        for chunk_idx in [-1] + list(range(len(chunks))):
+        if args.chunk_size is None:
+            chunks = [result.get("reasoning", "")]
+            chunk_indices = [0]
+        else:
+            chunks = split_solution_into_chunks(
+                result.get("reasoning", ""), min_chunk_length=args.chunk_size
+            )
+            chunk_indices = [-1] + list(range(len(chunks)))
+        for chunk_idx in chunk_indices:
             for rollout_idx in range(args.samples_per_chunk):
                 tasks.append((result, chunk_idx, rollout_idx, chunks))
 
