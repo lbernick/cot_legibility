@@ -247,6 +247,8 @@ def load_results_for_runs(run_names):
         inference_data = load_inference_data(run_path)
         results = eval_data.get("results", [])
         enrich_results_with_inference(results, inference_data)
+        for r in results:
+            r.setdefault("run", run_name)
         all_results.extend(results)
 
     return all_results
@@ -512,6 +514,10 @@ with tab1:
                         result = filtered_results[
                             st.session_state.selected_question_idx
                         ]
+
+                        st.caption(
+                            f"Run: {result.get('run', 'N/A')} | Sample: {result.get('sample_index', 0)}"
+                        )
 
                         st.markdown("#### Question")
                         st.write(result.get("question", "N/A"))

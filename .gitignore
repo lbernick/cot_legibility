@@ -19,3 +19,7 @@ runs/
 # TODO.md
 
 .DS_Store
+*.json
+*.jsonl
+*.parquet
+*.png
