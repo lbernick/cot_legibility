@@ -1,0 +1,37 @@
+run:
+  name: 20260405_085558_r1_gpqa
+  stages:
+  # - inference
+  # - evaluation
+  - analysis
+inference:
+  models:
+  - name: r1
+    temperature: 1.0
+    include_reasoning: true
+    provider: openrouter
+    model_id: deepseek/deepseek-r1
+  datasets:
+  - name: gpqa
+    num_questions: 100
+    samples_per_question: 5
+    shuffle: false
+  concurrency:
+    max_workers: 20
+evaluation:
+  grader_model: gpt-4o
+  grade_legibility: true
+  grade_correctness: true
+  max_workers: 50
+  max_chars_legibility: 5000
+  grade_legibility_chunks: false
+  chunk_size: 5000
+analysis:
+  plots:
+  - legibility_scores_boxplot
+  - legibility_scores_histogram
+  - correctness_assessment
+  statistics:
+  - summary
+  comparison:
+    enabled: false

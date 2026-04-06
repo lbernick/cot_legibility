@@ -1,0 +1,42 @@
+[project]
+name = "cot_legibility"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "anthropic>=0.69.0",
+    "openai>=1.0.0",
+    "datasets",
+    "python-dotenv",
+    "matplotlib",
+    "pyyaml",
+    "tqdm",
+    "streamlit",
+    "scipy",
+    "nbformat",
+    "torch",
+    "transformers",
+    "plotly",
+    "sentence-transformers",
+    "ipykernel",
+    "statsmodels>=0.14.6",
+    "kaleido>=1.2.0",
+    "scikit-learn>=1.7.2",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu124", marker = "sys_platform == 'linux'" },
+  { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

@@ -1,7 +1,5 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Guidelines for writing code
 
 Please:
@@ -12,4 +10,4 @@ Please:
 
 ## Git
 
-Make commits for every major change that you make. Exercise your own judgement on what constitutes a major change, but in general try not to go overboard.
+Make commits with descriptive messages for every major change that you make. Exercise your own judgement on what constitutes a major change.

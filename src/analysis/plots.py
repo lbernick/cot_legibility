@@ -15,6 +15,31 @@ def setup_matplotlib():
     plt.rcParams["hatch.linewidth"] = 1
 
 
+def plot_legibility_scores_histogram(evaluation: dict, output_dir: Path) -> None:
+    results = evaluation["results"]
+    scores = [
+        r["legibility"]["score"]
+        for r in results
+        if "legibility" in r and isinstance(r["legibility"].get("score"), (int, float))
+    ]
+
+    if not scores:
+        return
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    bins = [i + 0.5 for i in range(0, 10)]
+    ax.hist(scores, bins=bins, color="#87CEEB", edgecolor="black")
+    ax.set_xlabel("Illegibility Score (1=legible, 9=illegible)")
+    ax.set_ylabel("Count")
+    ax.set_title(f"Illegibility Score Distribution (n={len(scores)})")
+    ax.set_xlim(0, 10)
+    ax.set_xticks(range(1, 10))
+
+    plt.tight_layout()
+    plt.savefig(output_dir / "legibility_scores_histogram.png", dpi=150)
+    plt.close()
+
+
 def plot_legibility_scores_boxplot(evaluation: dict, output_dir: Path) -> None:
     results = evaluation["results"]
     scores = [
@@ -452,14 +477,22 @@ def plot_correctness_vs_legibility_scatter(
             score = (score / length) * median_length
 
         if q_id not in by_question:
-            by_question[q_id] = {"correctness": [], "legibility": [], "question": r.get("question", "")}
+            by_question[q_id] = {
+                "correctness": [],
+                "legibility": [],
+                "question": r.get("question", ""),
+            }
         by_question[q_id]["correctness"].append(correctness_map[corr])
         by_question[q_id]["legibility"].append(score)
 
-    questions_with_multiple = {q_id: data for q_id, data in by_question.items() if len(data["correctness"]) > 1}
+    questions_with_multiple = {
+        q_id: data for q_id, data in by_question.items() if len(data["correctness"]) > 1
+    }
 
     if not questions_with_multiple:
-        print("  Skipping correctness_vs_legibility_scatter: no questions with multiple samples")
+        print(
+            "  Skipping correctness_vs_legibility_scatter: no questions with multiple samples"
+        )
         return
 
     question_correlations = []
@@ -477,7 +510,9 @@ def plot_correctness_vs_legibility_scatter(
         question_correlations.append((q_id, corr_coef, data))
 
     if not question_correlations:
-        print("  Skipping correctness_vs_legibility_scatter: no questions with variance in correctness")
+        print(
+            "  Skipping correctness_vs_legibility_scatter: no questions with variance in correctness"
+        )
         return
 
     question_correlations.sort(key=lambda x: x[1])
@@ -527,7 +562,9 @@ def plot_correctness_vs_legibility_scatter(
                 density_range = density.max() - density.min()
                 if density_range > 0:
                     density_scaled = (density - density.min()) / density_range
-                    ax.scatter(x_jitter, y, c=plt.cm.viridis(density_scaled), alpha=0.6, s=30)
+                    ax.scatter(
+                        x_jitter, y, c=plt.cm.viridis(density_scaled), alpha=0.6, s=30
+                    )
                 else:
                     ax.scatter(x_jitter, y, alpha=0.6, s=30, color="#3498db")
             except Exception:
@@ -539,8 +576,14 @@ def plot_correctness_vs_legibility_scatter(
         ax.set_ylim(0, 10)
         ax.grid(True, linestyle="--", alpha=0.3)
 
-        question_preview = data["question"][:60] + "..." if len(data["question"]) > 60 else data["question"]
-        ax.set_title(f"r={corr_coef:.2f}, n={len(corr_vals)}\n{question_preview}", fontsize=9)
+        question_preview = (
+            data["question"][:60] + "..."
+            if len(data["question"]) > 60
+            else data["question"]
+        )
+        ax.set_title(
+            f"r={corr_coef:.2f}, n={len(corr_vals)}\n{question_preview}", fontsize=9
+        )
 
     for idx in range(len(selected_questions), len(axes)):
         axes[idx].set_visible(False)
@@ -595,7 +638,9 @@ def plot_question_correlations(
         by_question[q_id]["correctness"].append(correctness_map[corr])
         by_question[q_id]["legibility"].append(score)
 
-    questions_with_multiple = {q_id: data for q_id, data in by_question.items() if len(data["correctness"]) > 1}
+    questions_with_multiple = {
+        q_id: data for q_id, data in by_question.items() if len(data["correctness"]) > 1
+    }
 
     if not questions_with_multiple:
         print("  Skipping question_correlations: no questions with multiple samples")
@@ -616,7 +661,9 @@ def plot_question_correlations(
         correlations.append(corr_coef)
 
     if not correlations:
-        print("  Skipping question_correlations: no questions with variance in correctness")
+        print(
+            "  Skipping question_correlations: no questions with variance in correctness"
+        )
         return
 
     correlations = sorted(correlations)
@@ -625,10 +672,17 @@ def plot_question_correlations(
     x = np.arange(len(correlations))
     ax.scatter(x, correlations, alpha=0.6, s=50, color="#3498db")
 
-    ax.axhline(y=0, color='gray', linestyle='--', alpha=0.5, linewidth=1)
+    ax.axhline(y=0, color="gray", linestyle="--", alpha=0.5, linewidth=1)
 
     mean_corr = np.mean(correlations)
-    ax.axhline(y=mean_corr, color='green', linestyle='--', alpha=0.5, linewidth=2, label=f'Mean: {mean_corr:.3f}')
+    ax.axhline(
+        y=mean_corr,
+        color="green",
+        linestyle="--",
+        alpha=0.5,
+        linewidth=2,
+        label=f"Mean: {mean_corr:.3f}",
+    )
 
     ax.set_xlabel("Question Index (sorted by correlation)", fontsize=12)
     ax.set_ylabel("Pearson Correlation (Correctness vs Illegibility)", fontsize=12)
@@ -700,14 +754,22 @@ def plot_correctness_vs_legibility_scatter_comparison(
                 score = (score / length) * median_length
 
             if q_id not in by_question:
-                by_question[q_id] = {"correctness": [], "legibility": [], "question": r.get("question", "")}
+                by_question[q_id] = {
+                    "correctness": [],
+                    "legibility": [],
+                    "question": r.get("question", ""),
+                }
             by_question[q_id]["correctness"].append(correctness_map[corr])
             by_question[q_id]["legibility"].append(score)
 
-    questions_with_multiple = {q_id: data for q_id, data in by_question.items() if len(data["correctness"]) > 1}
+    questions_with_multiple = {
+        q_id: data for q_id, data in by_question.items() if len(data["correctness"]) > 1
+    }
 
     if not questions_with_multiple:
-        print("  Skipping correctness_vs_legibility_scatter_comparison: no questions with multiple samples")
+        print(
+            "  Skipping correctness_vs_legibility_scatter_comparison: no questions with multiple samples"
+        )
         return
 
     question_correlations = []
@@ -725,7 +787,9 @@ def plot_correctness_vs_legibility_scatter_comparison(
         question_correlations.append((q_id, corr_coef, data))
 
     if not question_correlations:
-        print("  Skipping correctness_vs_legibility_scatter_comparison: no questions with variance in correctness")
+        print(
+            "  Skipping correctness_vs_legibility_scatter_comparison: no questions with variance in correctness"
+        )
         return
 
     question_correlations.sort(key=lambda x: x[1])
@@ -775,7 +839,9 @@ def plot_correctness_vs_legibility_scatter_comparison(
                 density_range = density.max() - density.min()
                 if density_range > 0:
                     density_scaled = (density - density.min()) / density_range
-                    ax.scatter(x_jitter, y, c=plt.cm.viridis(density_scaled), alpha=0.6, s=30)
+                    ax.scatter(
+                        x_jitter, y, c=plt.cm.viridis(density_scaled), alpha=0.6, s=30
+                    )
                 else:
                     ax.scatter(x_jitter, y, alpha=0.6, s=30, color="#3498db")
             except Exception:
@@ -787,8 +853,14 @@ def plot_correctness_vs_legibility_scatter_comparison(
         ax.set_ylim(0, 10)
         ax.grid(True, linestyle="--", alpha=0.3)
 
-        question_preview = data["question"][:60] + "..." if len(data["question"]) > 60 else data["question"]
-        ax.set_title(f"r={corr_coef:.2f}, n={len(corr_vals)}\n{question_preview}", fontsize=9)
+        question_preview = (
+            data["question"][:60] + "..."
+            if len(data["question"]) > 60
+            else data["question"]
+        )
+        ax.set_title(
+            f"r={corr_coef:.2f}, n={len(corr_vals)}\n{question_preview}", fontsize=9
+        )
 
     for idx in range(len(selected_questions), len(axes)):
         axes[idx].set_visible(False)
@@ -866,8 +938,18 @@ def plot_prefill_correctness_comparison(evaluation: dict, output_dir: Path) -> N
     width = 0.35
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    bars1 = ax.bar(x - width/2, original_pcts, width, label="Original", alpha=0.8, color=colors)
-    bars2 = ax.bar(x + width/2, prefill_pcts, width, label="Prefilled", alpha=0.8, color=colors, hatch="///")
+    bars1 = ax.bar(
+        x - width / 2, original_pcts, width, label="Original", alpha=0.8, color=colors
+    )
+    bars2 = ax.bar(
+        x + width / 2,
+        prefill_pcts,
+        width,
+        label="Prefilled",
+        alpha=0.8,
+        color=colors,
+        hatch="///",
+    )
 
     for bars, pcts in [(bars1, original_pcts), (bars2, prefill_pcts)]:
         for bar, pct in zip(bars, pcts):
@@ -881,7 +963,9 @@ def plot_prefill_correctness_comparison(evaluation: dict, output_dir: Path) -> N
                 )
 
     ax.set_ylabel("Percentage (%)", fontsize=12)
-    ax.set_title(f"Correctness: Original vs Prefilled (n={prefill_stats['total']})", fontsize=14)
+    ax.set_title(
+        f"Correctness: Original vs Prefilled (n={prefill_stats['total']})", fontsize=14
+    )
     ax.set_xticks(x)
     ax.set_xticklabels(categories)
     ax.set_ylim(0, 110)
@@ -894,17 +978,20 @@ def plot_prefill_correctness_comparison(evaluation: dict, output_dir: Path) -> N
 
 
 PLOT_FUNCTIONS = {
+    "legibility_scores_histogram": plot_legibility_scores_histogram,
     "legibility_scores_boxplot": plot_legibility_scores_boxplot,
     "correctness_assessment": plot_correctness_assessment,
     "legibility_by_correctness": plot_legibility_by_correctness,
     "length_vs_legibility": plot_length_vs_legibility,
     "legibility_by_difficulty": plot_legibility_by_difficulty,
     "correctness_vs_legibility_scatter": plot_correctness_vs_legibility_scatter,
-    "correctness_vs_legibility_scatter_normalized": lambda e,
-    o: plot_correctness_vs_legibility_scatter(e, o, use_normalized=True),
+    "correctness_vs_legibility_scatter_normalized": lambda e, o: (
+        plot_correctness_vs_legibility_scatter(e, o, use_normalized=True)
+    ),
     "question_correlations": plot_question_correlations,
-    "question_correlations_normalized": lambda e,
-    o: plot_question_correlations(e, o, use_normalized=True),
+    "question_correlations_normalized": lambda e, o: plot_question_correlations(
+        e, o, use_normalized=True
+    ),
     "legibility_progression": plot_legibility_progression,
     "prefill_correctness_comparison": plot_prefill_correctness_comparison,
 }
@@ -914,10 +1001,8 @@ COMPARISON_PLOT_FUNCTIONS = {
     "legibility_comparison": plot_legibility_comparison,
     "legibility_by_difficulty_comparison": plot_legibility_by_difficulty_comparison,
     "correctness_vs_legibility_scatter_comparison": plot_correctness_vs_legibility_scatter_comparison,
-    "correctness_vs_legibility_scatter_comparison_normalized": lambda e,
-    o,
-    b=None: plot_correctness_vs_legibility_scatter_comparison(
-        e, o, use_normalized=True
+    "correctness_vs_legibility_scatter_comparison_normalized": lambda e, o, b=None: (
+        plot_correctness_vs_legibility_scatter_comparison(e, o, use_normalized=True)
     ),
 }
 
