@@ -1,0 +1,39 @@
+run:
+  stages:
+  - inference
+  - evaluation
+  - analysis
+inference:
+  models:
+  - name: qwq-lee
+    temperature: 1.0
+    max_tokens: 100000
+    reasoning_budget_tokens: 30000
+    provider: openrouter
+    model_id: qwen/qwq-32b
+    openrouter_provider:
+    - siliconflow/fp8
+    include_reasoning: false
+  datasets:
+  - name: gpqa
+    num_questions: 100
+    samples_per_question: 5
+    shuffle: false
+  concurrency:
+    max_workers: 50
+evaluation:
+  grader_model: gpt-4o
+  max_workers: 50
+  grade_legibility: true
+  grade_correctness: true
+  grade_legibility_chunks: false
+  chunk_size: 5000
+  max_chars_legibility: 5000
+analysis:
+  plots:
+  - legibility_scores_boxplot
+  - correctness_assessment
+  statistics:
+  - summary
+  comparison:
+    enabled: false
