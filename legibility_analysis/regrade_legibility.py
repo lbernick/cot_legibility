@@ -5,6 +5,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from tqdm.auto import tqdm
 
 from src.evaluation.grader import Grader, grade_item, compute_statistics
@@ -17,10 +19,10 @@ RUNS = [
     "streamlit_runs/20251022_003910_R1-Distill-Qwen-32B_gpqa",
     "streamlit_runs/20251022_012813_R1-Distill-Qwen-14B_gpqa",
     "streamlit_runs/20251022_013133_R1-Distill-Qwen-14B_gpqa",
-    #"streamlit_runs/20251024_054931_R1-Zero_gpqa",
+    # "streamlit_runs/20251024_054931_R1-Zero_gpqa",
     "streamlit_runs/20251024_155133_R1-Distill-Qwen-14B_gpqa",
     "streamlit_runs/20251024_155559_R1-Distill-Qwen-32B_gpqa",
-    #"streamlit_runs/20251024_165858_R1-Zero_gpqa",
+    # "streamlit_runs/20251024_165858_R1-Zero_gpqa",
 ]
 
 EVAL_CONFIG = {

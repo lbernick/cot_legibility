@@ -1,6 +1,9 @@
 """Compare illegibility score distributions between original and new inference runs."""
 
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -65,7 +68,6 @@ def plot_model(model_name: str, original_dirs: list[str], new_dirs: list[str]):
 
     bins = np.arange(0.5, 10.5, 1)
     centers = np.arange(1, 10)
-    width = 0.35
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
