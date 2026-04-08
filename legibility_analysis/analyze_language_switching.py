@@ -104,6 +104,7 @@ def analyze_sample(sample: dict, provider, model_config) -> dict:
         "question_id": sample["question_id"],
         "file": sample["file"],
         "num_windows": len(windows),
+        "excerpt": excerpt,
         "summary": result["summary"],
         "segments": result["segments"],
     }

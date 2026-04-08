@@ -57,7 +57,15 @@ def load_explanations(eval_path: str) -> list[dict]:
     for r in data.get("results", []):
         leg = r.get("legibility", {})
         if leg.get("score") is not None and leg.get("explanation"):
-            out.append({"score": leg["score"], "explanation": leg["explanation"]})
+            out.append(
+                {
+                    "question_id": r.get("question_id"),
+                    "sample_index": r.get("sample_index", 0),
+                    "score": leg["score"],
+                    "explanation": leg["explanation"],
+                    "file": eval_path,
+                }
+            )
     return out
 
 
@@ -231,6 +239,21 @@ def main():
         batch_size=args.batch_size,
         max_workers=args.max_workers,
     )
+
+    per_item = [
+        {
+            "question_id": exp["question_id"],
+            "sample_index": exp["sample_index"],
+            "score": exp["score"],
+            "explanation": exp["explanation"],
+            "categories": cats or [],
+        }
+        for exp, cats in zip(explanations, classifications)
+    ]
+    per_item_file = output_dir / "legibility_per_item.json"
+    with open(per_item_file, "w") as f:
+        json.dump(per_item, f, indent=2)
+    print(f"Per-item classifications saved to {per_item_file}")
 
     counts = aggregate(explanations, classifications)
     results_file = output_dir / "legibility_category_counts.json"

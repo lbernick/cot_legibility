@@ -1,0 +1,5498 @@
+{
+  "sample_size": 75,
+  "total_with_non_latin": 877,
+  "summary_counts": {
+    "coherent": 59,
+    "mixed": 10,
+    "error": 4,
+    "incoherent": 2
+  },
+  "segment_stats": {
+    "total": 813,
+    "coherent": 800,
+    "incoherent": 13,
+    "coherent_pct": 98.4
+  },
+  "languages": {
+    "Chinese": 746,
+    "English": 58,
+    "Russian": 3,
+    "German": 1,
+    "Chinese and English": 1,
+    "Chinese/English mix": 1,
+    "French": 1,
+    "Mathematical notation": 1,
+    "Chinese, Russian": 1
+  },
+  "results": [
+    {
+      "question_id": "gpqa_94",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酮",
+          "language": "Chinese",
+          "translation": "ketone",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_33",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "incoherent",
+      "segments": [
+        {
+          "text": "功能-2222",
+          "language": "Chinese",
+          "translation": "function-2222",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_54",
+      "file": "streamlit_runs/20251016_011742_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "碳素 OAc-CH2CH=CH2",
+          "language": "Chinese",
+          "translation": "Carbon OAc-CH2CH=CH2",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_75",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "注射iPSC到32细胞期的胚胎。",
+          "language": "Chinese",
+          "translation": "Inject iPSCs into embryos at the 32-cell stage.",
+          "coherent": true
+        },
+        {
+          "text": "以后",
+          "language": "Chinese",
+          "translation": "after",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_90",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "氟化",
+          "language": "Chinese",
+          "translation": "fluoridating",
+          "coherent": true
+        },
+        {
+          "text": "环己酮",
+          "language": "Chinese",
+          "translation": "cyclohexanone",
+          "coherent": true
+        },
+        {
+          "text": "benzaldehyd",
+          "language": "German",
+          "translation": "benzaldehyde",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_33",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "离去基团",
+          "language": "Chinese",
+          "translation": "leaving group",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_4",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "1的身份",
+          "language": "Chinese",
+          "translation": "the identity of 1",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_36",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "BF3催化",
+          "language": "Chinese",
+          "translation": "BF3 catalysis",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_46",
+      "file": "streamlit_runs/20251018_034705_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "分子式为 C8（苯环+CO）+ methoxy’s额外碳是 1 → total C9?",
+          "language": "Chinese",
+          "translation": "The molecular formula is C8 (benzene ring + CO) + the extra carbon from methoxy is 1 → total C9?",
+          "coherent": true
+        },
+        {
+          "text": "加上甲氧基的1碳是7， plus amide的CO的一个碳 → total为8？",
+          "language": "Chinese",
+          "translation": "Adding the 1 carbon from methoxy is 7, plus one carbon from the amide's CO → total is 8?",
+          "coherent": true
+        },
+        {
+          "text": "可能 my思路有问题.",
+          "language": "Chinese and English",
+          "translation": "Maybe my thinking is problematic.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_28",
+      "file": "streamlit_runs/20251017_192243_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "T变成了C",
+          "language": "Chinese",
+          "translation": "T changes to C",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_67",
+      "file": "streamlit_runs/20251016_011742_qwq_gpqa/inference.json",
+      "num_windows": 5,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "月份",
+          "language": "Chinese",
+          "translation": "month",
+          "coherent": true
+        },
+        {
+          "text": "等待",
+          "language": "Chinese",
+          "translation": "wait",
+          "coherent": true
+        },
+        {
+          "text": "民政局",
+          "language": "Chinese",
+          "translation": "Civil Affairs Bureau",
+          "coherent": false
+        },
+        {
+          "text": "但磁矩",
+          "language": "Chinese",
+          "translation": "but the magnetic moment",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_33",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 10,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "羟基",
+          "language": "Chinese",
+          "translation": "hydroxyl group",
+          "coherent": true
+        },
+        {
+          "text": "或某个",
+          "language": "Chinese",
+          "translation": "or some other",
+          "coherent": true
+        },
+        {
+          "text": "酮",
+          "language": "Chinese",
+          "translation": "ketone",
+          "coherent": true
+        },
+        {
+          "text": "酮",
+          "language": "Chinese",
+          "translation": "ketone",
+          "coherent": true
+        },
+        {
+          "text": "或者",
+          "language": "Chinese",
+          "translation": "or",
+          "coherent": true
+        },
+        {
+          "text": "羟基",
+          "language": "Chinese",
+          "translation": "hydroxyl group",
+          "coherent": true
+        },
+        {
+          "text": "4-羟基苯基",
+          "language": "Chinese",
+          "translation": "4-hydroxyphenyl",
+          "coherent": true
+        },
+        {
+          "text": "HO-CH(OH)(Ph)-CH(OH)(C6H4-OH-)",
+          "language": "English",
+          "translation": "HO-CH(OH)(Ph)-CH(OH)(C6H4-OH-)",
+          "coherent": true
+        },
+        {
+          "text": "bu",
+          "language": "English",
+          "translation": "but",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_52",
+      "file": "streamlit_runs/20251017_224816_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "羰基",
+          "language": "Chinese",
+          "translation": "carbonyl group",
+          "coherent": true
+        },
+        {
+          "text": "具体结构：",
+          "language": "Chinese",
+          "translation": "specific structure:",
+          "coherent": true
+        },
+        {
+          "text": "苯环连接到一个碳，该碳有双键：",
+          "language": "Chinese",
+          "translation": "the benzene ring is connected to a carbon that has a double bond:",
+          "coherent": true
+        },
+        {
+          "text": "苯-CH₂=CH₂会包含CH2.",
+          "language": "Chinese",
+          "translation": "Benzene-CH₂=CH₂ will include CH2.",
+          "coherent": true
+        },
+        {
+          "text": "苯-C(CH3)=CH2 such that:",
+          "language": "Chinese",
+          "translation": "Benzene-C(CH3)=CH2 such that:",
+          "coherent": true
+        },
+        {
+          "text": "苯基连接到一个碳，该碳带有一个甲基和一个双键.",
+          "language": "Chinese",
+          "translation": "The phenyl group is connected to a carbon that has a methyl and a double bond.",
+          "coherent": true
+        },
+        {
+          "text": "这样：",
+          "language": "Chinese",
+          "translation": "like this:",
+          "coherent": true
+        },
+        {
+          "text": "第一个碳连接了苯基、一个甲基和双键到第二个碳.",
+          "language": "Chinese",
+          "translation": "The first carbon is connected to the phenyl group, a methyl, and a double bond to the second carbon.",
+          "coherent": true
+        },
+        {
+          "text": "第二个碳是双键，连接到一个氢和末端的CH2?",
+          "language": "Chinese",
+          "translation": "The second carbon is double-bonded, connected to a hydrogen and the terminal CH2?",
+          "coherent": true
+        },
+        {
+          "text": "不:",
+          "language": "Chinese",
+          "translation": "No:",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_46",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酯",
+          "language": "Chinese",
+          "translation": "ester",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_47",
+      "file": "streamlit_runs/20251020_221724_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "溴",
+          "language": "Chinese",
+          "translation": "bromine",
+          "coherent": true
+        },
+        {
+          "text": "需要确定反应路径.",
+          "language": "Chinese",
+          "translation": "Need to determine the reaction pathway.",
+          "coherent": true
+        },
+        {
+          "text": "因此，如果 product3是 acyl chloride (RCl为酮的变体)",
+          "language": "Chinese",
+          "translation": "Therefore, if product3 is an acyl chloride (RCl is a variant of the ketone)",
+          "coherent": true
+        },
+        {
+          "text": "双键可能 still存在，或者被 hydrogenate?",
+          "language": "Chinese",
+          "translation": "The double bond may still exist, or be hydrogenated?",
+          "coherent": true
+        },
+        {
+          "text": "假设 product2 是 cyclohex-2-en-1-one， then product3 是 Cl-C(=O)-CH(CH2...)",
+          "language": "Chinese",
+          "translation": "Assuming product2 is cyclohex-2-en-1-one, then product3 is Cl-C(=O)-CH(CH2...)",
+          "coherent": true
+        },
+        {
+          "text": "因此，最终 product4 是 the alcohol corresponding to the acyl chloride 的 structure.",
+          "language": "Chinese",
+          "translation": "Therefore, the final product4 is the alcohol corresponding to the structure of the acyl chloride.",
+          "coherent": true
+        },
+        {
+          "text": "或许 cyclohexene双键 remains in product3和 product4？",
+          "language": "Chinese",
+          "translation": "Perhaps the cyclohexene double bond remains in product3 and product4?",
+          "coherent": true
+        },
+        {
+          "text": "假设 product4的结构是 such that the cyclohexene ring has a –CH2OH group attached at the original羰基 position.",
+          "language": "Chinese",
+          "translation": "Assuming the structure of product4 is such that the cyclohexene ring has a –CH2OH group attached at the original carbonyl position.",
+          "coherent": true
+        },
+        {
+          "text": "那么 the molecule would be something like this:",
+          "language": "Chinese",
+          "translation": "Then the molecule would be something like this:",
+          "coherent": true
+        },
+        {
+          "text": "假设 product4是 the reduction of the acyl chloride derived from the α,β-unsatur",
+          "language": "Chinese",
+          "translation": "Assuming product4 is the reduction of the acyl chloride derived from the α,β-unsatur",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_27",
+      "file": "streamlit_runs/20251017_192243_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "以该",
+          "language": "Chinese",
+          "translation": "with this",
+          "coherent": true
+        },
+        {
+          "text": "暂时是",
+          "language": "Chinese",
+          "translation": "temporarily is",
+          "coherent": true
+        },
+        {
+          "text": "紧邻",
+          "language": "Chinese",
+          "translation": "adjacent",
+          "coherent": true
+        },
+        {
+          "text": "不饱和或 fixed碳",
+          "language": "Chinese",
+          "translation": "unsaturated or fixed carbon",
+          "coherent": true
+        },
+        {
+          "text": "苯乙烯部分",
+          "language": "Chinese",
+          "translation": "styrene part",
+          "coherent": true
+        },
+        {
+          "text": "比重",
+          "language": "Chinese",
+          "translation": "specific gravity",
+          "coherent": true
+        },
+        {
+          "text": "这个",
+          "language": "Chinese",
+          "translation": "this",
+          "coherent": true
+        },
+        {
+          "text": "当",
+          "language": "Chinese",
+          "translation": "when",
+          "coherent": true
+        },
+        {
+          "text": "带有",
+          "language": "Chinese",
+          "translation": "carrying",
+          "coherent": true
+        },
+        {
+          "text": "为",
+          "language": "Chinese",
+          "translation": "is",
+          "coherent": true
+        },
+        {
+          "text": "完整名称为",
+          "language": "Chinese",
+          "translation": "the complete name is",
+          "coherent": true
+        },
+        {
+          "text": "或者可能的其他名",
+          "language": "Chinese",
+          "translation": "or possibly other names",
+          "coherent": true
+        },
+        {
+          "text": "然后",
+          "language": "Chinese",
+          "translation": "then",
+          "coherent": true
+        },
+        {
+          "text": "最后的",
+          "language": "Chinese",
+          "translation": "the final",
+          "coherent": true
+        },
+        {
+          "text": "大",
+          "language": "Chinese",
+          "translation": "big",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_88",
+      "file": "streamlit_runs/20251020_221724_qwq_gpqa/inference.json",
+      "num_windows": 5,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "比如 C=O-CH2-C=O",
+          "language": "Chinese",
+          "translation": "for example C=O-CH2-C=O",
+          "coherent": true
+        },
+        {
+          "text": "结构 could be: O=C-CH2-CO-O",
+          "language": "Chinese",
+          "translation": "the structure could be: O=C-CH2-CO-O",
+          "coherent": true
+        },
+        {
+          "text": "每个 proton on the first CH₂ would couple with two H from the second CH₂， resulting in triplet.",
+          "language": "Chinese",
+          "translation": "each proton on the first CH₂ would couple with two H from the second CH₂, resulting in triplet.",
+          "coherent": true
+        },
+        {
+          "text": "故答案是three coupling， triplet.",
+          "language": "Chinese",
+          "translation": "so the answer is three coupling, triplet.",
+          "coherent": true
+        },
+        {
+          "text": "假设产品3的最高屏蔽质子是连接到两个羰基的甲基，如CH2之间有两羰基。",
+          "language": "Chinese",
+          "translation": "Assuming that the highest shielded protons of product 3 are connected to two carbonyls, such as CH2 between two carbonyls.",
+          "coherent": true
+        },
+        {
+          "text": "总共有两个不同的 J 耦合, but if symmetric, the couplings would be same.",
+          "language": "Chinese",
+          "translation": "There are a total of two different J couplings, but if symmetric, the couplings would be the same.",
+          "coherent": true
+        },
+        {
+          "text": "总共有四个氢？ 这样 might导致 a quartet?",
+          "language": "Chinese",
+          "translation": "A total of four hydrogens? This might lead to a quartet?",
+          "coherent": true
+        },
+        {
+          "text": "例如， if adjacent碳有 two H each on both sides, total of four H， so the proton is coupled with 4 Hs → five lines (quintet).",
+          "language": "Chinese",
+          "translation": "For example, if adjacent carbons have two H each on both sides, a total of four H, so the proton is coupled with 4 Hs → five lines (quintet).",
+          "coherent": true
+        },
+        {
+          "text": "但是，相邻的碳 each has two HYdrogens.",
+          "language": "Chinese",
+          "translation": "However, each adjacent carbon has two hydrogens.",
+          "coherent": true
+        },
+        {
+          "text": "如果这些氢 are all through same bond?",
+          "language": "Chinese",
+          "translation": "What if these hydrogens are all through the same bond?",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_54",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "醋酸丙烯酯",
+          "language": "Chinese",
+          "translation": "propenyl acetate",
+          "coherent": true
+        },
+        {
+          "text": "结构：",
+          "language": "Chinese",
+          "translation": "structure:",
+          "coherent": true
+        },
+        {
+          "text": "碳原子：",
+          "language": "Chinese",
+          "translation": "carbon atoms:",
+          "coherent": true
+        },
+        {
+          "text": "假设结构：",
+          "language": "Chinese",
+          "translation": "assume structure:",
+          "coherent": true
+        },
+        {
+          "text": "不，",
+          "language": "Chinese",
+          "translation": "no,",
+          "coherent": true
+        },
+        {
+          "text": "结构如：",
+          "language": "Chinese",
+          "translation": "structure like:",
+          "coherent": true
+        },
+        {
+          "text": "双键在C2和3之间：",
+          "language": "Chinese",
+          "translation": "the double bond is between C-2 and C-3:",
+          "coherent": true
+        },
+        {
+          "text": "醋酸酯部分 connected to carbon 4：",
+          "language": "Chinese",
+          "translation": "the acetate part connected to carbon 4:",
+          "coherent": true
+        },
+        {
+          "text": "但这样可能 chain too short.",
+          "language": "Chinese",
+          "translation": "but this might make the chain too short.",
+          "coherent": true
+        },
+        {
+          "text": "例如：",
+          "language": "Chinese",
+          "translation": "for example:",
+          "coherent": true
+        },
+        {
+          "text": "双键 protons: the protons on C-3 and C-2:",
+          "language": "Chinese",
+          "translation": "double bond protons: the protons on C-3 and C-2:",
+          "coherent": true
+        },
+        {
+          "text": "假设:",
+          "language": "Chinese",
+          "translation": "assume:",
+          "coherent": true
+        },
+        {
+          "text": "双键在C2和3之间：",
+          "language": "Chinese",
+          "translation": "the double bond is between C-2 and C-3:",
+          "coherent": true
+        },
+        {
+          "text": "此外，C-2还有一个 proton which forms a triplet with coupling from CH2.",
+          "language": "Chinese",
+          "translation": "in addition, C-2 has a proton which forms a triplet with coupling from CH2.",
+          "coherent": true
+        },
+        {
+          "text": "这样可能.",
+          "language": "Chinese",
+          "translation": "this might be possible.",
+          "coherent": true
+        },
+        {
+          "text": "可能我正在浪费太多时间，应该比较给出的四个选项的可能的nMR.",
+          "language": "Chinese",
+          "translation": "maybe I am wasting too much time, I should compare the possible nMR of the four options given.",
+          "coherent": true
+        },
+        {
+          "text": "选项1: cis-Propenyl acetate",
+          "language": "Chinese",
+          "translation": "Option 1: cis-Propenyl acetate",
+          "coherent": true
+        },
+        {
+          "text": "结构：丙烯基醋酸酯。",
+          "language": "Chinese",
+          "translation": "structure: propenyl acetate.",
+          "coherent": true
+        },
+        {
+          "text": "这样会有：",
+          "language": "Chinese",
+          "translation": "this would have:",
+          "coherent": true
+        },
+        {
+          "text": "双键在丙烯基（三碳）的碳1-2之间：",
+          "language": "Chinese",
+          "translation": "the double bond is between carbon 1-2 of the propenyl (three carbons):",
+          "coherent": true
+        },
+        {
+          "text": "碳结构：",
+          "language": "Chinese",
+          "translation": "carbon structure:",
+          "coherent": true
+        },
+        {
+          "text": "双键的 H是 CH2=CH-, 因此有两个H（在 carbon1的双键 carbon）.",
+          "language": "Chinese",
+          "translation": "the H of the double bond is CH2=CH-, thus there are two H (on the double bond carbon 1).",
+          "coherent": true
+        },
+        {
+          "text": "Wait需要 更仔细分析.",
+          "language": "Chinese",
+          "translation": "Wait, need to analyze more carefully.",
+          "coherent": true
+        },
+        {
+          "text": "不， perhaps the structure是：CH2=C(OCOCR)-CH3.",
+          "language": "Chinese",
+          "translation": "no, perhaps the structure is: CH2=C(OCOCR)-CH3.",
+          "coherent": true
+        },
+        {
+          "text": "这样 the OAc is attached to carbon 2 of the丙烯基.",
+          "language": "Chinese",
+          "translation": "thus the OAc is attached to carbon 2 of the propenyl.",
+          "coherent": true
+        },
+        {
+          "text": "因此，氢分布：",
+          "language": "Chinese",
+          "translation": "therefore, hydrogen distribution:",
+          "coherent": true
+        },
+        {
+          "text": "双键的 H是 carbon1和 carbon2的 hydrogen.",
+          "language": "Chinese",
+          "translation": "the H of the double bond is the hydrogen of carbon 1 and carbon 2.",
+          "coherent": true
+        },
+        {
+          "text": "假设 carbon1的 H是 two H (on碳1), 和 carbon2还有一个 H (since它's also connected to t",
+          "language": "Chinese",
+          "translation": "assume the H of carbon 1 is two H (on carbon 1), and carbon 2 has one H (since it's also connected to t",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_15",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "连接到 C3",
+          "language": "Chinese",
+          "translation": "connected to C3",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_27",
+      "file": "streamlit_runs/20251019_195028_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "benzyl溴",
+          "language": "Chinese",
+          "translation": "benzyl bromide",
+          "coherent": true
+        },
+        {
+          "text": "benzyl bromi",
+          "language": "English",
+          "translation": "",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_80",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "碳位：",
+          "language": "Chinese",
+          "translation": "Carbon positions:",
+          "coherent": true
+        },
+        {
+          "text": "碳：",
+          "language": "Chinese",
+          "translation": "Carbon:",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_24",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酮",
+          "language": "Chinese",
+          "translation": "ketone",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_66",
+      "file": "streamlit_runs/20251016_011742_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "|-1站立⟩",
+          "language": "Chinese",
+          "translation": "|-1 standing⟩",
+          "coherent": true
+        },
+        {
+          "text": "|-1站|1>",
+          "language": "Chinese",
+          "translation": "|-1 standing|1>",
+          "coherent": true
+        },
+        {
+          "text": "|0站0>",
+          "language": "Chinese",
+          "translation": "|0 standing 0>",
+          "coherent": true
+        },
+        {
+          "text": "|0站-1>",
+          "language": "Chinese",
+          "translation": "|0 standing -1>",
+          "coherent": true
+        },
+        {
+          "text": "|-1站0>",
+          "language": "Chinese",
+          "translation": "|-1 standing 0>",
+          "coherent": true
+        },
+        {
+          "text": "|0站-1>",
+          "language": "Chinese",
+          "translation": "|0 standing -1>",
+          "coherent": true
+        },
+        {
+          "text": "|2,0个>",
+          "language": "Chinese",
+          "translation": "|2,0 individual>",
+          "coherent": true
+        },
+        {
+          "text": "|1站-1>",
+          "language": "Chinese",
+          "translation": "|1 standing -1>",
+          "coherent": true
+        },
+        {
+          "text": "|0站0Ars>",
+          "language": "Chinese",
+          "translation": "|0 standing 0 Ars>",
+          "coherent": true
+        },
+        {
+          "text": "|0erman>",
+          "language": "Chinese",
+          "translation": "|0 German>",
+          "coherent": true
+        },
+        {
+          "text": "|0站0>",
+          "language": "Chinese",
+          "translation": "|0 standing 0>",
+          "coherent": true
+        },
+        {
+          "text": "|0站-1每股⟩",
+          "language": "Chinese",
+          "translation": "|0 standing -1 per share⟩",
+          "coherent": true
+        },
+        {
+          "text": "|0站0>是",
+          "language": "Chinese",
+          "translation": "|0 standing 0> is",
+          "coherent": true
+        },
+        {
+          "text": "|-1站0>",
+          "language": "Chinese",
+          "translation": "|-1 standing 0>",
+          "coherent": true
+        },
+        {
+          "text": "|0站-1>",
+          "language": "Chinese",
+          "translation": "|0 standing -1>",
+          "coherent": true
+        },
+        {
+          "text": "|2, -1⟩",
+          "language": "Chinese",
+          "translation": "|2, -1⟩",
+          "coherent": true
+        },
+        {
+          "text": "|-1站0⟩",
+          "language": "Chinese",
+          "translation": "|-1 standing 0⟩",
+          "coherent": true
+        },
+        {
+          "text": "|0站-1⟩",
+          "language": "Chinese",
+          "translation": "|0 standing -1⟩",
+          "coherent": true
+        },
+        {
+          "text": "|-1 0⟩",
+          "language": "Chinese",
+          "translation": "|-1 0⟩",
+          "coherent": true
+        },
+        {
+          "text": "|0 -1⟩",
+          "language": "Chinese",
+          "translation": "|0 -1⟩",
+          "coherent": true
+        },
+        {
+          "text": "|m1, m2⟩",
+          "language": "Chinese",
+          "translation": "|m1, m2⟩",
+          "coherent": true
+        },
+        {
+          "text": "和",
+          "language": "Chinese",
+          "translation": "and",
+          "coherent": true
+        },
+        {
+          "text": "个",
+          "language": "Chinese",
+          "translation": "individual",
+          "coherent": true
+        },
+        {
+          "text": "的",
+          "language": "Chinese",
+          "translation": "of",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_36",
+      "file": "streamlit_runs/20251020_221724_qwq_gpqa/inference.json",
+      "num_windows": 9,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "烯",
+          "language": "Chinese",
+          "translation": "alkene",
+          "coherent": true
+        },
+        {
+          "text": "溴乙烷的结构是溴代乙烷是",
+          "language": "Chinese",
+          "translation": "The structure of bromoethane is bromoethane is",
+          "coherent": false
+        },
+        {
+          "text": "形成R-O-Br?",
+          "language": "Chinese",
+          "translation": "Form R-O-Br?",
+          "coherent": true
+        },
+        {
+          "text": "比如，",
+          "language": "Chinese",
+          "translation": "For example,",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "七",
+          "language": "Chinese",
+          "translation": "seven",
+          "coherent": true
+        },
+        {
+          "text": "加2碳到",
+          "language": "Chinese",
+          "translation": "Add 2 carbons to",
+          "coherent": true
+        },
+        {
+          "text": "结构",
+          "language": "Chinese",
+          "translation": "structure",
+          "coherent": true
+        },
+        {
+          "text": "假定",
+          "language": "Chinese",
+          "translation": "Assume",
+          "coherent": true
+        },
+        {
+          "text": "五 carbon minus the central carbon取代的?可能五 carbons added",
+          "language": "Chinese/English mix",
+          "translation": "five carbons minus the central carbon replaced? Possibly five carbons added",
+          "coherent": false
+        },
+        {
+          "text": "假设 hydration不增加",
+          "language": "Chinese",
+          "translation": "Assuming hydration does not increase",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_52",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "苯基-CH(CH3)=CH2",
+          "language": "Chinese",
+          "translation": "Phenyl-CH(CH3)=CH2",
+          "coherent": true
+        },
+        {
+          "text": "碳1's bonding",
+          "language": "Chinese",
+          "translation": "Carbon 1's bonding",
+          "coherent": true
+        },
+        {
+          "text": "或者， C1 has连接一个苯, the double bond to C2",
+          "language": "Chinese",
+          "translation": "Or, C1 has a connection to a phenyl, the double bond to C2",
+          "coherent": true
+        },
+        {
+          "text": "因此, C1的结构",
+          "language": "Chinese",
+          "translation": "Therefore, the structure of C1",
+          "coherent": true
+        },
+        {
+          "text": "总共有四个单键？",
+          "language": "Chinese",
+          "translation": "Are there a total of four single bonds?",
+          "coherent": true
+        },
+        {
+          "text": "哪是正确的",
+          "language": "Chinese",
+          "translation": "Which is correct",
+          "coherent": true
+        },
+        {
+          "text": "因此,碳1 has:",
+          "language": "Chinese",
+          "translation": "Therefore, carbon 1 has:",
+          "coherent": true
+        },
+        {
+          "text": "和两个 hydrogens?",
+          "language": "Chinese",
+          "translation": "And two hydrogens?",
+          "coherent": true
+        },
+        {
+          "text": "不， the取代基的结构是 CH(CH3)=CH2",
+          "language": "Chinese",
+          "translation": "No, the structure of the substituent is CH(CH3)=CH2",
+          "coherent": true
+        },
+        {
+          "text": "双键连接 to carbon1",
+          "language": "Chinese",
+          "translation": "Double bond connected to carbon 1",
+          "coherent": true
+        },
+        {
+          "text": "和两个单 bonds",
+          "language": "Chinese",
+          "translation": "And two single bonds",
+          "coherent": true
+        },
+        {
+          "text": "不，可能：",
+          "language": "Chinese",
+          "translation": "No, possibly:",
+          "coherent": true
+        },
+        {
+          "text": "这样， the substituent is：",
+          "language": "Chinese",
+          "translation": "Thus, the substituent is:",
+          "coherent": true
+        },
+        {
+          "text": "这样， substituent structure is CH2=CH(CH3)",
+          "language": "Chinese",
+          "translation": "Thus, the substituent structure is CH2=CH(CH3)",
+          "coherent": true
+        },
+        {
+          "text": "第一个碳（CH2=） connected 直接到苯?",
+          "language": "Chinese",
+          "translation": "Is the first carbon (CH2=) directly connected to benzene?",
+          "coherent": true
+        },
+        {
+          "text": "这样， the substituent is：",
+          "language": "Chinese",
+          "translation": "Thus, the substituent is:",
+          "coherent": true
+        },
+        {
+          "text": "那么 this would have three carbons",
+          "language": "Chinese",
+          "translation": "Then this would have three carbons",
+          "coherent": true
+        },
+        {
+          "text": "第一个碳 (attached to苯)",
+          "language": "Chinese",
+          "translation": "The first carbon (attached to benzene)",
+          "coherent": true
+        },
+        {
+          "text": "双键连接， has a甲基 (three H on CH3?)",
+          "language": "Chinese",
+          "translation": "Double bond connected, has a methyl (three H on CH3?)",
+          "coherent": true
+        },
+        {
+          "text": "此结构",
+          "language": "Chinese",
+          "translation": "This structure",
+          "coherent": true
+        },
+        {
+          "text": "从其 remaining bond有一个 hydrogen",
+          "language": "Chinese",
+          "translation": "From its remaining bond, there is one hydrogen",
+          "coherent": true
+        },
+        {
+          "text": "以及 the methyl attached",
+          "language": "Chinese",
+          "translation": "And the methyl attached",
+          "coherent": true
+        },
+        {
+          "text": "第二个 carbon (双键的 second)",
+          "language": "Chinese",
+          "translation": "The second carbon (the second of the double bond)",
+          "coherent": true
+        },
+        {
+          "text": "加上 the terminal carbon",
+          "language": "Chinese",
+          "translation": "Plus the terminal carbon",
+          "coherent": true
+        },
+        {
+          "text": "第三个 carbon吗？",
+          "language": "Chinese",
+          "translation": "The third carbon?",
+          "coherent": true
+        },
+        {
+          "text": "不， there are only three carbons?",
+          "language": "Chinese",
+          "translation": "No, there are only three carbons?",
+          "coherent": true
+        },
+        {
+          "text": "此结构的 hydrogens",
+          "language": "Chinese",
+          "translation": "The hydrogens of this structure",
+          "coherent": true
+        },
+        {
+          "text": "不，第三个 carbon是 the last one with the double bond",
+          "language": "Chinese",
+          "translation": "No, the third carbon is the last one with the double bond",
+          "coherent": true
+        },
+        {
+          "text": "或者 the结构是 such that the substituent has three carbons总？",
+          "language": "Chinese",
+          "translation": "Or the structure is such that the substituent has three carbons total?",
+          "coherent": true
+        },
+        {
+          "text": "这似乎难以确定具体结构",
+          "language": "Chinese",
+          "translation": "This seems difficult to determine the specific structure",
+          "coherent": true
+        },
+        {
+          "text": "Assuming the best fit is C12H12O2 with six signals",
+          "language": "English",
+          "translation": "Assuming the best fit is C12H12O2 with six signals",
+          "coherent": true
+        },
+        {
+          "text": "Wait let's compute",
+          "language": "English",
+          "translation": "Wait let's compute",
+          "coherent": true
+        },
+        {
+          "text": "But maybe C12H12O2 would have 7 degrees",
+          "language": "English",
+          "translation": "But maybe C12H12O2 would have 7 degrees",
+          "coherent": true
+        },
+        {
+          "text": "但 let me see another angle",
+          "language": "Chinese",
+          "translation": "But let me see another angle",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_61",
+      "file": "streamlit_runs/20251020_221724_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "acid催化",
+          "language": "Chinese",
+          "translation": "acid catalysis",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_59",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "飞船",
+          "language": "Chinese",
+          "translation": "spaceship",
+          "coherent": true
+        },
+        {
+          "text": "其实",
+          "language": "Chinese",
+          "translation": "actually",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_85",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "还原反应的立体化学可能由还原剂和起始材料决定",
+          "language": "Chinese",
+          "translation": "The stereochemistry of the reduction reaction may be determined by the reducing agent and the starting materials.",
+          "coherent": true
+        },
+        {
+          "text": "et",
+          "language": "French",
+          "translation": "and",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_24",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "有一个烯丙基取代基。",
+          "language": "Chinese",
+          "translation": "There is an allyl substituent.",
+          "coherent": true
+        },
+        {
+          "text": "结构为: o-allylphenol:",
+          "language": "Chinese",
+          "translation": "The structure is: o-allylphenol:",
+          "coherent": true
+        },
+        {
+          "text": "但该反应是否生成spiro compound?",
+          "language": "Chinese",
+          "translation": "But does this reaction generate a spiro compound?",
+          "coherent": true
+        },
+        {
+          "text": "可能我需要更仔细的.",
+          "language": "Chinese",
+          "translation": "Perhaps I need to be more careful.",
+          "coherent": true
+        },
+        {
+          "text": "反应 of the compound 2-phenyl-1-alkenyl ether (2-aminourea), rearrangement形成 spirotetradecane.",
+          "language": "Chinese",
+          "translation": "The reaction of the compound 2-phenyl-1-alkenyl ether (2-aminourea), rearrangement forms spirotetradecane.",
+          "coherent": true
+        },
+        {
+          "text": "reactant A 是 乙基 4-phenyl-3-丁-enyl ether,那样在 Claisen rearrangement 可得到 spiro ring.",
+          "language": "Chinese",
+          "translation": "Reactant A is ethyl 4-phenyl-3-butenyl ether, which can yield a spiro ring in the Claisen rearrangement.",
+          "coherent": true
+        },
+        {
+          "text": "反应经 Claisen rearrangement would form the product 2,8-dimethylspiro[4.5]decan-6-one.",
+          "language": "Chinese",
+          "translation": "The reaction through Claisen rearrangement would form the product 2,8-dimethylspiro[4.5]decan-6-one.",
+          "coherent": true
+        },
+        {
+          "text": "可能是 Claisen rearrangement of 1-phenyl-1-methyl-3-buten-2-one, leading to spiro product with the rings forming around the methyl groups.",
+          "language": "Chinese",
+          "translation": "It could be the Claisen rearrangement of 1-phenyl-1-methyl-3-buten-2-one, leading to a spiro product with the rings forming around the methyl groups.",
+          "coherent": true
+        },
+        {
+          "text": "对于spiro [4.5], perhaps specifically o-allylbenzyl ether.",
+          "language": "Chinese",
+          "translation": "For spiro [4.5], perhaps specifically o-allylbenzyl ether.",
+          "coherent": true
+        },
+        {
+          "text": "O-allylbenzyl ether的结构是:",
+          "language": "Chinese",
+          "translation": "The structure of O-allylbenzyl ether is:",
+          "coherent": true
+        },
+        {
+          "text": "Wait, allyl group is CH2CH2CH=CH2 ?",
+          "language": "English",
+          "translation": "",
+          "coherent": true
+        },
+        {
+          "text": "Wait, an allyl group应为CH2CH-CH2.",
+          "language": "Chinese",
+          "translation": "Wait, an allyl group should be CH2CH-CH2.",
+          "coherent": true
+        },
+        {
+          "text": "或许 the reactant A is the compound 1-methoxy-2-allyl compound, such that rearrangement gives the spiro compound.",
+          "language": "Chinese",
+          "translation": "Perhaps the reactant A is the compound 1-methoxy-2-allyl compound, such that rearrangement gives the spiro compound.",
+          "coherent": true
+        },
+        {
+          "text": "鉴于该 reaction uses H2SO4, and yields spiro, 推测 It is the Claisen rearrangement of an allylphenyl compound.",
+          "language": "Chinese",
+          "translation": "Given that this reaction uses H2SO4, and yields spiro, it is speculated that it is the Claisen rearrangement of an allylphenyl compound.",
+          "coherent": true
+        },
+        {
+          "text": "总结：假设 first reaction的 name reaction为Claisen rearrangement, reactant A is an aryl allyl ether which contains methyl groups appropriately positioned.",
+          "language": "Chinese",
+          "translation": "Summary: Assuming the name of the first reaction is Claisen rearrangement, reactant A is an aryl allyl ether which contains methyl groups appropriately positioned.",
+          "coherent": true
+        },
+        {
+          "text": "经过 rearrangement会形成 spiro structure, 所以假设reactant is 2,4-dimethyl-3-phenyl-烯丙醚？",
+          "language": "Chinese",
+          "translation": "After rearrangement, a spiro structure will be formed, so it is assumed that the reactant is 2,4-dimethyl-3-phenyl-allyl ether?",
+          "coherent": true
+        },
+        {
+          "text": "或者更为常见 therefore, the reactant A is 1-phenyl-1-methylallylpropenone, but I'm not certain.",
+          "language": "Chinese",
+          "translation": "Or more commonly, therefore, the reactant A is 1-phenyl-1-methylallylpropenone, but I'm not certain.",
+          "coherent": true
+        },
+        {
+          "text": "但 perhaps the answer is:",
+          "language": "Chinese",
+          "translation": "But perhaps the answer is:",
+          "coherent": true
+        },
+        {
+          "text": "First reaction's reactant A 是 the dicyclohexyl ketocarboxylic acid? 不, 猜测可能更简单.",
+          "language": "Chinese",
+          "translation": "First reaction's reactant A is the dicyclohexyl ketocarboxylic acid? No, the guess may be simpler.",
+          "coherent": true
+        },
+        {
+          "text": "Alternatively, I'll recall that spiro compounds formed by Claisen rearrangement often start",
+          "language": "English",
+          "translation": "",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_55",
+      "file": "streamlit_runs/20251016_011742_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "跃迁",
+          "language": "Chinese",
+          "translation": "transition",
+          "coherent": true
+        },
+        {
+          "text": "符合条件",
+          "language": "Chinese",
+          "translation": "meets the conditions",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_49",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "所以, 比例因子应为:",
+          "language": "Chinese",
+          "translation": "So, the ratio factor should be:",
+          "coherent": true
+        },
+        {
+          "text": "这可能吗？也许对称因素 S 是 4π/(sqrt(2)*8) ，",
+          "language": "Chinese",
+          "translation": "Is this possible? Maybe the symmetry factor S is 4π/(sqrt(2)*8).",
+          "coherent": true
+        },
+        {
+          "text": "因此，通过这些计算，看来图表的 循环数是 5？",
+          "language": "Chinese",
+          "translation": "Therefore, through these calculations, it seems that the number of loops in the diagram is 5?",
+          "coherent": true
+        },
+        {
+          "text": "如果 three loops each contribute 1/(4pi)^ squared,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "但题目中的表达式是 1/(4 pi)^6,",
+          "language": "Chinese",
+          "translation": "But the expression in the problem is 1/(4 pi)^6.",
+          "coherent": true
+        },
+        {
+          "text": "然而，通过包括顶点和 对称因子的 factor (4pi)^4,",
+          "language": "Chinese",
+          "translation": "However, by including the vertex and the symmetry factor (4pi)^4,",
+          "coherent": true
+        },
+        {
+          "text": "因此，可能 the answer 是 three loops ？",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "或许 the 关键点在于 the 这个表达式里 terms:",
+          "language": "Chinese",
+          "translation": "Perhaps the key point lies in the terms of this expression:",
+          "coherent": true
+        },
+        {
+          "text": "而 the 循环每循环带入 1/(4 pi)^2 系数,",
+          "language": "Chinese",
+          "translation": "And each loop contributes a coefficient of 1/(4 pi)^2.",
+          "coherent": true
+        },
+        {
+          "text": "因此, to get  the 1/(4 pi)^6 ，需要 three loops,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "即使这与 the degrees of divergence 结果 conflict,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "或许 the 茶渍 破坏了 other terms 所以 we can't rely on the divergence degree.",
+          "language": "Chinese",
+          "translation": "Perhaps the tea stain destroyed other terms so we can't rely on the divergence degree.",
+          "coherent": true
+        },
+        {
+          "text": "或者, the factors 的 sqrt(2)*8 是 the 循环数中的 factors,",
+          "language": "Chinese",
+          "translation": "Or, the factors of sqrt(2)*8 are factors in the number of loops.",
+          "coherent": true
+        },
+        {
+          "text": "Alternatively, 想 a diagram with three loops,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "假设 the three loops,",
+          "language": "Chinese",
+          "translation": "Assuming the three loops,",
+          "coherent": true
+        },
+        {
+          "text": "然后， the remaining terms,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "the constants sqrt(2)*8 是来自 vertices and other factors,",
+          "language": "Chinese",
+          "translation": "The constants sqrt(2)*8 come from vertices and other factors.",
+          "coherent": true
+        },
+        {
+          "text": "所以 the number of loops 是 three,",
+          "language": "Chinese",
+          "translation": "So the number of loops is three.",
+          "coherent": true
+        },
+        {
+          "text": "即使 the vertex count 和 divergence degree 不一致, may due to missing informations in the 問題.",
+          "language": "Chinese",
+          "translation": "Even if the vertex count and divergence degree are inconsistent, it may be due to missing information in the problem.",
+          "coherent": true
+        },
+        {
+          "text": "根据 Euler's formula for three loops,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "若 the external legs 是 4,",
+          "language": "Chinese",
+          "translation": "If the external legs are 4,",
+          "coherent": true
+        },
+        {
+          "text": "假设 the diagram 是 a four-point function,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "所以 external 合计 legs 是 4,",
+          "language": "Chinese",
+          "translation": "So the total external legs are 4.",
+          "coherent": true
+        },
+        {
+          "text": "假设 the vertices 的 legs:",
+          "language": "Chinese",
+          "translation": "Assuming the legs of the vertices:",
+          "coherent": true
+        },
+        {
+          "text": "假设 the alpha vertices 有 4 legs each (like phi^4 的顶点), and the g vertices 有 3 legs (就像 fermion vertices),",
+          "language": "Chinese",
+          "translation": "Assuming the alpha vertices have 4 legs each (like phi^4 vertices), and the g vertices have 3 legs (like fermion vertices),",
+          "coherent": true
+        },
+        {
+          "text": "则,",
+          "language": "Chinese",
+          "translation": "Then,",
+          "coherent": true
+        },
+        {
+          "text": "total vertex legs:3(4) +2(3) =12 +6=18,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "所以,",
+          "language": "Chinese",
+          "translation": "So,",
+          "coherent": true
+        },
+        {
+          "text": "18 = 2P +4,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "从而:",
+          "language": "Chinese",
+          "translation": "Thus:",
+          "coherent": true
+        },
+        {
+          "text": "20:",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "2P =14,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "P=7,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "然后 loops: L= P -V +1 =7 -5 +1=3,",
+          "language": "Chinese",
+          "translation": "Then loops: L= P -V +1 =7 -5 +1=3,",
+          "coherent": true
+        },
+        {
+          "text": "这就是 three loops,",
+          "language": "Chinese",
+          "translation": "This is three loops.",
+          "coherent": true
+        },
+        {
+          "text": "于是 diverge degree D=4*3−2*7=12-14= -2，",
+          "language": "Chinese",
+          "translation": "Thus the divergence degree D=4*3−2*7=12-14= -2,",
+          "coherent": true
+        },
+        {
+          "text": "即该图 is convergent,",
+          "language": "Chinese",
+          "translation": "That means the diagram is convergent,",
+          "coherent": true
+        },
+        {
+          "text": "因此， the (Q/M)^2 term,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "但 the diagram 是 convergent 的，意味着 the integral 的 divergence degree 是负的,",
+          "language": "Chinese",
+          "translation": "But the diagram is convergent, which means the divergence degree of the integral is negative,",
+          "coherent": true
+        },
+        {
+          "text": "所以 the  (Q/M) 因素的指数应该 是 negative,",
+          "language": "Chinese",
+          "translation": "So the exponent of the (Q/M) factor should be negative,",
+          "coherent": true
+        },
+        {
+          "text": "然而, the given 公式有 (Q/M)^2 positive exponent,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "这可能 suggest that 我们应该 consider,",
+          "language": "Chinese",
+          "translation": "This may suggest that we should consider,",
+          "coherent": true
+        },
+        {
+          "text": "the factor comes from somewhere else,",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "比如 非对称 mass 比如 or IR divergence,",
+          "language": "Chinese",
+          "translation": "For example, asymmetric mass or IR divergence,",
+          "coherent": true
+        },
+        {
+          "text": "但是 这可能 不合理,",
+          "language": "Chinese",
+          "translation": "But this may be unreasonable,",
+          "coherent": true
+        },
+        {
+          "text": "但 因此， the loop count 是 three 的,",
+          "language": "Chinese",
+          "translation": "But therefore, the loop count is three,",
+          "coherent": true
+        },
+        {
+          "text": "因此， 基于 the loop 的 contribute to the  (4 pi)^{-6} factor，",
+          "language": "Chinese",
+          "translation": "Therefore, based on the contribution of the loops to the (4 pi)^{-6} factor,",
+          "coherent": true
+        },
+        {
+          "text": "the answer 是 three loops.",
+          "language": "English",
+          "translation": null,
+          "coherent": true
+        },
+        {
+          "text": "综上， the 答案 是 three loops.",
+          "language": "Chinese",
+          "translation": "In summary, the answer is three loops.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_80",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酮",
+          "language": "Chinese",
+          "translation": "ketone",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_99",
+      "file": "streamlit_runs/20251018_175940_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "溴",
+          "language": "Chinese",
+          "translation": "bromine",
+          "coherent": true
+        },
+        {
+          "text": "溴ination",
+          "language": "Chinese",
+          "translation": "bromination",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_61",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "hydroxymeth腈",
+          "language": "Chinese",
+          "translation": "hydroxymethylnitrile",
+          "coherent": true
+        },
+        {
+          "text": "o",
+          "language": "English",
+          "translation": "o",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_52",
+      "file": "streamlit_runs/20251018_175940_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "苯",
+          "language": "Chinese",
+          "translation": "benzene",
+          "coherent": true
+        },
+        {
+          "text": "substitu",
+          "language": "English",
+          "translation": "substitu",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_88",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "最去屏蔽的氢应该是靠近羰基的氢，比如邻近羰烷基的氢。",
+          "language": "Chinese",
+          "translation": "The most deshielded hydrogen should be the one near the carbonyl, such as the hydrogen adjacent to the carbonyl group.",
+          "coherent": true
+        },
+        {
+          "text": "在NMR谱中，邻近羰基的CH₂氢通常会是三重峰，因为与相邻的CH₂（J耦合常数，比如3或4 Hz between adjacent CH groups）",
+          "language": "Chinese",
+          "translation": "In the NMR spectrum, the CH₂ hydrogens adjacent to the carbonyl are usually a triplet because of the coupling with the adjacent CH₂ (J coupling constant, for example, 3 or 4 Hz between adjacent CH groups).",
+          "coherent": true
+        },
+        {
+          "text": "可能 the correct answer is a doublet of doublets， but I'll guess that the most deshielded proton is in a environment giving a triplet.",
+          "language": "English",
+          "translation": "",
+          "coherent": true
+        },
+        {
+          "text": "或者 the answer is a singlet， but the question says coupling pattern， singlet is no coupling.",
+          "language": "Chinese",
+          "translation": "Alternatively, the answer is a singlet, but the question says coupling pattern, a singlet has no coupling.",
+          "coherent": true
+        },
+        {
+          "text": "可能正确的答案是一个 doublet of doublets，因为附近有两个质子，但根据adamantane的3D结构可能对称，导致 two equivalent couplings, leading to triplet.",
+          "language": "Chinese",
+          "translation": "The correct answer may be a doublet of doublets because there are two neighboring protons, but according to the 3D structure of adamantane, it may be symmetrical, leading to two equivalent couplings, resulting in a triplet.",
+          "coherent": true
+        },
+        {
+          "text": "或者考虑 the adamantane骨架rigid， the coupling could only be from one direction，导致 doublet.",
+          "language": "Chinese",
+          "translation": "Alternatively, considering the rigid adamantane framework, the coupling could only be from one direction, leading to a doublet.",
+          "coherent": true
+        },
+        {
+          "text": "我可能需要作出最佳猜测： The coupling pattern of the most deshielded hydrogen in product 3 would be a doublet due to coupling with one proton.",
+          "language": "Chinese",
+          "translation": "I may need to make the best guess: The coupling pattern of the most deshielded hydrogen in product 3 would be a doublet due to coupling with one proton.",
+          "coherent": true
+        },
+        {
+          "text": "但 I'm uncertain . Alternatively， the most deshield proton has no nearby coupl",
+          "language": "English",
+          "translation": "",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_42",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "磺",
+          "language": "Chinese",
+          "translation": "sulfonic",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_45",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 15,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "烯",
+          "language": "Chinese",
+          "translation": "alkene",
+          "coherent": true
+        },
+        {
+          "text": "碳3",
+          "language": "Chinese",
+          "translation": "Carbon 3",
+          "coherent": true
+        },
+        {
+          "text": "结构式",
+          "language": "Chinese",
+          "translation": "structural formula",
+          "coherent": true
+        },
+        {
+          "text": "一个",
+          "language": "Chinese",
+          "translation": "one",
+          "coherent": true
+        },
+        {
+          "text": "还有一个",
+          "language": "Chinese",
+          "translation": "and another",
+          "coherent": true
+        },
+        {
+          "text": "如果这四个 groups 都 different, then C3 is a chiral center.",
+          "language": "Chinese",
+          "translation": "If all four groups are different, then C3 is a chiral center.",
+          "coherent": true
+        },
+        {
+          "text": "可能",
+          "language": "Chinese",
+          "translation": "maybe",
+          "coherent": true
+        },
+        {
+          "text": "需要环状反应",
+          "language": "Chinese",
+          "translation": "requires a cyclic reaction",
+          "coherent": true
+        },
+        {
+          "text": "通常会是",
+          "language": "Chinese",
+          "translation": "usually will be",
+          "coherent": true
+        },
+        {
+          "text": "或者",
+          "language": "Chinese",
+          "translation": "or",
+          "coherent": true
+        },
+        {
+          "text": "同分异构体",
+          "language": "Chinese",
+          "translation": "isomer",
+          "coherent": true
+        },
+        {
+          "text": "若",
+          "language": "Chinese",
+          "translation": "if",
+          "coherent": true
+        },
+        {
+          "text": "不是的",
+          "language": "Chinese",
+          "translation": "no",
+          "coherent": true
+        },
+        {
+          "text": "催化剂",
+          "language": "Chinese",
+          "translation": "catalyst",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_48",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "碳3",
+          "language": "Chinese",
+          "translation": "carbon 3",
+          "coherent": true
+        },
+        {
+          "text": "碳4",
+          "language": "Chinese",
+          "translation": "carbon 4",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_89",
+      "file": "streamlit_runs/20251017_192243_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "环己期间 1和4 as carbonyl groups?",
+          "language": "Chinese",
+          "translation": "Cyclohexane at positions 1 and 4 as carbonyl groups?",
+          "coherent": true
+        },
+        {
+          "text": "例如，",
+          "language": "Chinese",
+          "translation": "For example,",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_58",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "反应式：每消耗1mol OH^- 可中和1mol 的CH3COOH.",
+          "language": "Chinese",
+          "translation": "Reaction formula: 1 mol of OH^- can neutralize 1 mol of CH3COOH.",
+          "coherent": true
+        },
+        {
+          "text": "现有的 OH^-是0.1 mol，与 CH3COOH的量0.05 mol 相比， OH^-过量，反应后剩余OH^- =0.1 -0.05=0.05 mol",
+          "language": "Chinese",
+          "translation": "The existing OH^- is 0.1 mol, compared to the amount of CH3COOH which is 0.05 mol, OH^- is in excess, and the remaining OH^- after the reaction is 0.1 - 0.05 = 0.05 mol.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_78",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "结构",
+          "language": "Chinese",
+          "translation": "structure",
+          "coherent": true
+        },
+        {
+          "text": "Ph-CO-CH(CH3₂?)",
+          "language": "English",
+          "translation": "Ph-CO-CH(CH3₂?)",
+          "coherent": true
+        },
+        {
+          "text": "或许",
+          "language": "Chinese",
+          "translation": "perhaps",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_94",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "烯",
+          "language": "Chinese",
+          "translation": "alkene",
+          "coherent": true
+        },
+        {
+          "text": "con",
+          "language": "English",
+          "translation": "con",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_36",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "溴乙烷",
+          "language": "Chinese",
+          "translation": "bromoethane",
+          "coherent": true
+        },
+        {
+          "text": "结构：",
+          "language": "Chinese",
+          "translation": "structure:",
+          "coherent": true
+        },
+        {
+          "text": "碳链是:",
+          "language": "Chinese",
+          "translation": "the carbon chain is:",
+          "coherent": true
+        },
+        {
+          "text": "Alpha位置是第二个-CH2-在 the carboxylic end.",
+          "language": "Chinese",
+          "translation": "The alpha position is the second -CH2- at the carboxylic end.",
+          "coherent": true
+        },
+        {
+          "text": "步骤二: BuLi脱去一个氢 from the alpha carbon (the 第二个 CH2), forming an enolate.",
+          "language": "Chinese",
+          "translation": "Step two: BuLi removes a hydrogen from the alpha carbon (the second CH2), forming an enolate.",
+          "coherent": true
+        },
+        {
+          "text": "因此，在 the resulting compound C， the alpha carbon now has been alkylated to become:",
+          "language": "Chinese",
+          "translation": "Therefore, in the resulting compound C, the alpha carbon now has been alkylated to become:",
+          "coherent": true
+        },
+        {
+          "text": "是的， this would be the结构的 compound C.",
+          "language": "Chinese",
+          "translation": "Yes, this would be the structure of compound C.",
+          "coherent": true
+        },
+        {
+          "text": "原 propionaldehyde has three碳， the ester（步骤一） adds one carbon（from ethanol）, totaling four.",
+          "language": "Chinese",
+          "translation": "The original propionaldehyde has three carbons, the ester (step one) adds one carbon (from ethanol), totaling four.",
+          "coherent": true
+        },
+        {
+          "text": "或者，可能 the ester had four carbons（CH3CH2COOEt has four carbons？ Let me count：",
+          "language": "Chinese",
+          "translation": "Or, maybe the ester had four carbons (does CH3CH2COOEt have four carbons? Let me count:",
+          "coherent": true
+        },
+        {
+          "text": "对不起， perhaps better to count correctly：",
+          "language": "Chinese",
+          "translation": "Sorry, perhaps better to count correctly:",
+          "coherent": true
+        },
+        {
+          "text": "丙酸是 CH3CH2COOH.",
+          "language": "Chinese",
+          "translation": "Propionic acid is CH3CH2COOH.",
+          "coherent": true
+        },
+        {
+          "text": "转换 to its ethyl ester is:",
+          "language": "Chinese",
+          "translation": "Converting to its ethyl ester is:",
+          "coherent": true
+        },
+        {
+          "text": "这样, the分子 has:",
+          "language": "Chinese",
+          "translation": "Thus, the molecule has:",
+          "coherent": true
+        },
+        {
+          "text": "carbon chain为:",
+          "language": "Chinese",
+          "translation": "the carbon chain is:",
+          "coherent": true
+        },
+        {
+          "text": "其实 the分子式 is C5H10O2:",
+          "language": "Chinese",
+          "translation": "Actually, the molecular formula is C5H10O2:",
+          "coherent": true
+        },
+        {
+          "text": "丙基 is three carbons, ethyl is two, so total的 carbon count是 3+2 =5.",
+          "language": "Chinese",
+          "translation": "Propyl is three carbons, ethyl is two, so the total carbon count is 3+2=5.",
+          "coherent": true
+        },
+        {
+          "text": "所以步骤 one gives five碳.",
+          "language": "Chinese",
+          "translation": "So step one gives five carbons.",
+          "coherent": true
+        },
+        {
+          "text": "步骤二和 steps two和 three:",
+          "language": "Chinese",
+          "translation": "Steps two and steps two and three:",
+          "coherent": true
+        },
+        {
+          "text": "步骤二: deprotonation不改变 carbon count.",
+          "language": "Chinese",
+          "translation": "Step two: deprotonation does not change the carbon count.",
+          "coherent": true
+        },
+        {
+          "text": "步骤三：与溴乙烷 reaction adds CH2CH3到 alpha的位置, which already is a carbon.",
+          "language": "Chinese",
+          "translation": "Step three: the reaction with bromoethane adds CH2CH3 to the alpha position, which already is a carbon.",
+          "coherent": true
+        },
+        {
+          "text": "因此, 每个 step添加的carbon count：",
+          "language": "Chinese",
+          "translation": "Therefore, the carbon count added by each step:",
+          "coherent": true
+        },
+        {
+          "text": "步骤 one: 5 carbons.",
+          "language": "Chinese",
+          "translation": "Step one: 5 carbons.",
+          "coherent": true
+        },
+        {
+          "text": "步骤 three adds two more carbons (ethanol的 alkyl group) → total七个.",
+          "language": "Chinese",
+          "translation": "Step three adds two more carbons (the alkyl group from ethanol) → total seven.",
+          "coherent": true
+        },
+        {
+          "text": "因此 Compound C has seven carbons.",
+          "language": "Chinese",
+          "translation": "Therefore, Compound C has seven carbons.",
+          "coherent": true
+        },
+        {
+          "text": "然后步骤四, 水解 ester into羧 acid, 不改变 carbon count, so D also has seven carbons.",
+          "language": "Chinese",
+          "translation": "Then step four, hydrolyze the ester into carboxylic acid, does not change the carbon count, so D also has seven carbons.",
+          "coherent": true
+        },
+        {
+          "text": "步骤五：与3-bromopentane via BuLi 和 PPh3.",
+          "language": "Chinese",
+          "translation": "Step five: with 3-bromopentane via BuLi and PPh3.",
+          "coherent": true
+        },
+        {
+          "text": "假设步骤five中， compound D ( a羧 acid with branched chain） undergoes another alkylation with3-bromopentane.",
+          "language": "Chinese",
+          "translation": "Assuming in step five, compound D (a carboxylic acid with branched chain) undergoes another alkylation with 3-bromopentane.",
+          "coherent": true
+        },
+        {
+          "text": "假设 the reaction is：",
+          "language": "Chinese",
+          "translation": "Assuming the reaction is:",
+          "coherent": true
+        },
+        {
+          "text": "3-bromopentane（CH2BrCH2CH2CH2CH3）与 the alcohol（PPh3在 和BuLi条件下） forms a Grignard，然后添加到 D的某个 carbon.",
+          "language": "Chinese",
+          "translation": "3-bromopentane (CH2BrCH2CH2CH2CH3) reacts with the alcohol (PPh3 under BuLi conditions) forms a Grignard, then adds to some carbon of D.",
+          "coherent": true
+        },
+        {
+          "text": "假设 D是 the羧 acid with the previously formed alkyl groups, and the final product E是 the result of adding the pentyl group from3-bromopentane's carbon.",
+          "language": "Chinese",
+          "translation": "Assuming D is the carboxylic acid with the previously formed alkyl groups, and the final product E is the result of adding the pentyl group from 3-bromopentane's carbon.",
+          "coherent": true
+        },
+        {
+          "text": "因此, 每个 step添加的carbon count：",
+          "language": "Chinese",
+          "translation": "Therefore, the carbon count added by each step:",
+          "coherent": true
+        },
+        {
+          "text": "步骤 one: 5 carbons.",
+          "language": "Chinese",
+          "translation": "Step one: 5 carbons.",
+          "coherent": true
+        },
+        {
+          "text": "步骤 three adds two more carbons (ethanol的 alkyl group) → total七个.",
+          "language": "Chinese",
+          "translation": "Step three adds two more carbons (the alkyl group from ethanol) → total seven.",
+          "coherent": true
+        },
+        {
+          "text": "步骤 five：添加 the pentyl group（五个 carbons）吗？ No,溴戊烷 is five carbons（3-bromopentane是 CH₂Br(CH₂)三CH3 →总 of five carbons）.",
+          "language": "Chinese",
+          "translation": "Step five: does adding the pentyl group (five carbons)? No, bromo-pentane is five carbons (3-bromopentane is CH₂Br(CH₂)₃CH₃ → total of five carbons).",
+          "coherent": true
+        },
+        {
+          "text": "Adding that would total seven",
+          "language": "English",
+          "translation": "Adding that would total seven.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_69",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "二氧化氯 ClO2",
+          "language": "Chinese",
+          "translation": "chlorine dioxide ClO2",
+          "coherent": true
+        },
+        {
+          "text": "C₂ᵥ",
+          "language": "Mathematical notation",
+          "translation": "C₂v (Schönflies notation)",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_90",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 8,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "氟基",
+          "language": "Chinese",
+          "translation": "fluorine group",
+          "coherent": true
+        },
+        {
+          "text": "苯丙酮衍生物",
+          "language": "Chinese",
+          "translation": "benzyl ketone derivative",
+          "coherent": true
+        },
+        {
+          "text": "氟化",
+          "language": "Chinese",
+          "translation": "fluorination",
+          "coherent": true
+        },
+        {
+          "text": "羰基",
+          "language": "Chinese",
+          "translation": "carbonyl",
+          "coherent": true
+        },
+        {
+          "text": "结构",
+          "language": "Chinese",
+          "translation": "structure",
+          "coherent": true
+        },
+        {
+          "text": "3-氟-3-苯基环己烯酮",
+          "language": "Chinese",
+          "translation": "3-fluoro-3-phenylcyclohexenone",
+          "coherent": true
+        },
+        {
+          "text": "邻近羰基",
+          "language": "Chinese",
+          "translation": "adjacent to the carbonyl",
+          "coherent": true
+        },
+        {
+          "text": "羰基连接着一个 CH₂ group",
+          "language": "Chinese",
+          "translation": "the carbonyl is connected to a CH₂ group",
+          "coherent": true
+        },
+        {
+          "text": "产品2的结构是这样的",
+          "language": "Chinese",
+          "translation": "the structure of product 2 is as follows",
+          "coherent": true
+        },
+        {
+          "text": "氟取代了原来的 α position's hydrogen",
+          "language": "Chinese",
+          "translation": "fluorine replaces the original alpha position's hydrogen",
+          "coherent": true
+        },
+        {
+          "text": "羰基 - CHF 双键到 CH - 芳香环",
+          "language": "Chinese",
+          "translation": "carbonyl - CHF double bond to CH - aromatic ring",
+          "coherent": true
+        },
+        {
+          "text": "Cyclohexyl-C(=O)CHFCHC6H5 或其他合适的结构",
+          "language": "Chinese",
+          "translation": "Cyclohexyl-C(=O)CHFCHC6H5 or other suitable structure",
+          "coherent": true
+        },
+        {
+          "text": "3-fluoro-3-苯基环己烯酮",
+          "language": "Chinese",
+          "translation": "3-fluoro-3-phenylcyclohexenone",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_64",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "два",
+          "language": "Russian",
+          "translation": "two",
+          "coherent": true
+        },
+        {
+          "text": "Bu",
+          "language": "English",
+          "translation": "Bu",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_82",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "incoherent",
+      "segments": [
+        {
+          "text": "浓度浓度0.02 M.",
+          "language": "Chinese",
+          "translation": "Concentration concentration 0.02 M.",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_46",
+      "file": "streamlit_runs/20251017_172954_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酯的，因此",
+          "language": "Chinese",
+          "translation": "of the ester, therefore",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_94",
+      "file": "streamlit_runs/20251017_192243_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "这里可能最好用文字描述：",
+          "language": "Chinese",
+          "translation": "It might be best to describe it in words:",
+          "coherent": true
+        },
+        {
+          "text": "带有两个甲基。",
+          "language": "Chinese",
+          "translation": "with two methyl groups.",
+          "coherent": true
+        },
+        {
+          "text": "接下来是:",
+          "language": "Chinese",
+          "translation": "Next is:",
+          "coherent": true
+        },
+        {
+          "text": "C5是双键到C6,",
+          "language": "Chinese",
+          "translation": "C5 is double bonded to C6,",
+          "coherent": true
+        },
+        {
+          "text": "注意第六碳有一个甲基",
+          "language": "Chinese",
+          "translation": "Note that the sixth carbon has a methyl group.",
+          "coherent": true
+        },
+        {
+          "text": "兹两碳涉及是C1和C2。",
+          "language": "Chinese",
+          "translation": "The two carbons involved are C1 and C2.",
+          "coherent": true
+        },
+        {
+          "text": "带有甲基),而C1是链的开始。",
+          "language": "Chinese",
+          "translation": "with a methyl group), while C1 is at the start of the chain.",
+          "coherent": true
+        },
+        {
+          "text": "基于取代度,",
+          "language": "Chinese",
+          "translation": "Based on substitution degree,",
+          "coherent": true
+        },
+        {
+          "text": "而C1只有一个连接到它的 CH2 group (or H?) 等,",
+          "language": "Chinese",
+          "translation": "while C1 has only one connection to its CH2 group (or H?), etc.",
+          "coherent": true
+        },
+        {
+          "text": "因此，分子的covalent diagram大概是这样的：",
+          "language": "Chinese",
+          "translation": "Therefore, the molecular covalent diagram is probably like this:",
+          "coherent": true
+        },
+        {
+          "text": "当这种环 epoxide is opened with Me李,",
+          "language": "Chinese",
+          "translation": "When this ring epoxide is opened with MeLi,",
+          "coherent": true
+        },
+        {
+          "text": "C5和C6.",
+          "language": "Chinese",
+          "translation": "C5 and C6.",
+          "coherent": true
+        },
+        {
+          "text": "而 C6 would have a hydroxyl group.",
+          "language": "Chinese",
+          "translation": "and C6 would have a hydroxyl group.",
+          "coherent": true
+        },
+        {
+          "text": "因此 the product is the alcohol at C6,",
+          "language": "Chinese",
+          "translation": "Therefore, the product is the alcohol at C6,",
+          "coherent": true
+        },
+        {
+          "text": "但 need to check if that creates a tertiary carbon.",
+          "language": "Chinese",
+          "translation": "but need to check if that creates a tertiary carbon.",
+          "coherent": true
+        },
+        {
+          "text": "此 would mean the C5 now has three substituents:",
+          "language": "Chinese",
+          "translation": "This would mean that C5 now has three substituents:",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_20",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "第一位的碳: -COOH",
+          "language": "Chinese",
+          "translation": "The first carbon: -COOH",
+          "coherent": true
+        },
+        {
+          "text": "第二为碳: CH2– but double bond with third carbon,",
+          "language": "Chinese",
+          "translation": "The second carbon: CH2– but double bond with third carbon,",
+          "coherent": true
+        },
+        {
+          "text": "Third碳: CH2– but also double with second,",
+          "language": "Chinese",
+          "translation": "Third carbon: CH2– but also double with second,",
+          "coherent": true
+        },
+        {
+          "text": "第四碳: -COOH.",
+          "language": "Chinese",
+          "translation": "Fourth carbon: -COOH.",
+          "coherent": true
+        },
+        {
+          "text": "Esther化后 becomes:",
+          "language": "Chinese",
+          "translation": "After esterification becomes:",
+          "coherent": true
+        },
+        {
+          "text": "四个碳吗？",
+          "language": "Chinese",
+          "translation": "Four carbons?",
+          "coherent": true
+        },
+        {
+          "text": "因此，分子的结构是：(COOCH3)CH=CH(CH2) –不，这會形成一个问题。",
+          "language": "Chinese",
+          "translation": "Therefore, the structure of the molecule is: (COOCH3)CH=CH(CH2) – no, this will create a problem.",
+          "coherent": true
+        },
+        {
+          "text": "左端的 COOCH3 连接到碳1，接着是碳2和碳3之间的双键，然后是碳4连接在碳3的另一端并带有 COOCH3基团。",
+          "language": "Chinese",
+          "translation": "The COOCH3 on the left connects to carbon 1, followed by a double bond between carbon 2 and carbon 3, and then carbon 4 connects to the other end of carbon 3 with a COOCH3 group.",
+          "coherent": true
+        },
+        {
+          "text": "所以具体结构是：",
+          "language": "Chinese",
+          "translation": "So the specific structure is:",
+          "coherent": true
+        },
+        {
+          "text": "Carbon 1: OOC- (connected to 记为 OH replaced by OCH3)",
+          "language": "Chinese",
+          "translation": "Carbon 1: OOC- (connected to noted as OH replaced by OCH3)",
+          "coherent": true
+        },
+        {
+          "text": "Actually, the正确结构 is:",
+          "language": "Chinese",
+          "translation": "Actually, the correct structure is:",
+          "coherent": true
+        },
+        {
+          "text": "But that's only 三个 carbons，显然不对。",
+          "language": "Chinese",
+          "translation": "But that's only three carbons, obviously incorrect.",
+          "coherent": true
+        },
+        {
+          "text": "Wait, no, the correct structure must have four碳 atoms with双键在中间。",
+          "language": "Chinese",
+          "translation": "Wait, no, the correct structure must have four carbon atoms with a double bond in the middle.",
+          "coherent": true
+        },
+        {
+          "text": "因此，它应该写成：",
+          "language": "Chinese",
+          "translation": "Therefore, it should be written as:",
+          "coherent": true
+        },
+        {
+          "text": "OOCCH2–CH=CH–CH2COOCH3?",
+          "language": "Chinese",
+          "translation": "OOCCH2–CH=CH–CH2COOCH3?",
+          "coherent": true
+        },
+        {
+          "text": "这 way,总共有四个碳在 the center之间？",
+          "language": "Chinese",
+          "translation": "This way, there are a total of four carbons in the center?",
+          "coherent": true
+        },
+        {
+          "text": "不，这个结构有五个 carbon atoms.",
+          "language": "Chinese",
+          "translation": "No, this structure has five carbon atoms.",
+          "coherent": true
+        },
+        {
+          "text": "因此，我 think there must be a misunderstanding in my structure assumption.",
+          "language": "Chinese",
+          "translation": "Therefore, I think there must be a misunderstanding in my structure assumption.",
+          "coherent": true
+        },
+        {
+          "text": "Alternatively, perhaps the structure is OOCCH2CH=CH2 ？",
+          "language": "Chinese",
+          "translation": "Alternatively, perhaps the structure is OOCCH2CH=CH2?",
+          "coherent": true
+        },
+        {
+          "text": "不对.",
+          "language": "Chinese",
+          "translation": "Incorrect.",
+          "coherent": true
+        },
+        {
+          "text": "我可能需要其他 approach.",
+          "language": "Chinese",
+          "translation": "I may need another approach.",
+          "coherent": true
+        },
+        {
+          "text": "Perhaps it's better to accept that the key point is the symmetrical nature resulting from the trans configuration of the double bond and the same groups on both sides.",
+          "language": "English",
+          "translation": "",
+          "coherent": true
+        },
+        {
+          "text": "因此，这个分子没有不对称中心，因此没有 optical isomerism.",
+          "language": "Chinese",
+          "translation": "Therefore, this molecule has no chiral center, thus no optical isomerism.",
+          "coherent": true
+        },
+        {
+          "text": "因此答案：",
+          "language": "Chinese",
+          "translation": "Therefore, the answer is:",
+          "coherent": true
+        },
+        {
+          "text": "A是苯醌（benzoquinone does not show tautomerism),",
+          "language": "Chinese",
+          "translation": "A is benzoquinone (benzoquinone does not show tautomerism),",
+          "coherent": true
+        },
+        {
+          "text": "B是 methyl 2-hydroxypropanoate 展示 optical isomerism.",
+          "language": "Chinese",
+          "translation": "B is methyl 2-hydroxypropanoate showing optical isomerism.",
+          "coherent": true
+        },
+        {
+          "text": "So part A的是 benzoquinone 不 show tautomerism and part B是 methyl 2-hydroxypropanoate.",
+          "language": "Chinese",
+          "translation": "So part A is that benzoquinone does not show tautomerism and part B is methyl 2-hydroxypropanoate.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_13",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "因为它能够",
+          "language": "Chinese",
+          "translation": "because it can",
+          "coherent": true
+        },
+        {
+          "text": "tran",
+          "language": "English",
+          "translation": "",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_78",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 4,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "苯乙酮",
+          "language": "Chinese",
+          "translation": "benzylacetone",
+          "coherent": true
+        },
+        {
+          "text": "苯亚甲基乙酮",
+          "language": "Chinese",
+          "translation": "benzylideneacetone",
+          "coherent": true
+        },
+        {
+          "text": "苯基-CO-CH₂-",
+          "language": "Chinese",
+          "translation": "phenyl-CO-CH₂-",
+          "coherent": true
+        },
+        {
+          "text": "苯甲基 -CO-CH₃",
+          "language": "Chinese",
+          "translation": "phenylmethyl-CO-CH₃",
+          "coherent": true
+        },
+        {
+          "text": "會",
+          "language": "Chinese",
+          "translation": "will",
+          "coherent": true
+        },
+        {
+          "text": "可能是在脱羧反应中的羧酸",
+          "language": "Chinese",
+          "translation": "may be the carboxylic acid in the decarboxylation reaction",
+          "coherent": true
+        },
+        {
+          "text": "从而原化合物X是一种 3,5-二甲基苯基乙酸 acid",
+          "language": "Chinese",
+          "translation": "thus the original compound X is a 3,5-dimethylphenyl acetic acid",
+          "coherent": true
+        },
+        {
+          "text": "若 R 是 3,5-dimethylphenyl group",
+          "language": "Chinese",
+          "translation": "if R is the 3,5-dimethylphenyl group",
+          "coherent": true
+        },
+        {
+          "text": "等待",
+          "language": "Chinese",
+          "translation": "wait",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_89",
+      "file": "streamlit_runs/20251017_230836_qwq_gpqa/inference.json",
+      "num_windows": 4,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "醛",
+          "language": "Chinese",
+          "translation": "aldehyde",
+          "coherent": true
+        },
+        {
+          "text": "再度考虑",
+          "language": "Chinese",
+          "translation": "reconsider",
+          "coherent": true
+        },
+        {
+          "text": "可能反应不同",
+          "language": "Chinese",
+          "translation": "the reaction may be different",
+          "coherent": true
+        },
+        {
+          "text": "碳链是：",
+          "language": "Chinese",
+          "translation": "the carbon chain is:",
+          "coherent": true
+        },
+        {
+          "text": "或者，",
+          "language": "Chinese",
+          "translation": "or,",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_89",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 4,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "断裂",
+          "language": "Chinese",
+          "translation": "break",
+          "coherent": true
+        },
+        {
+          "text": "产物",
+          "language": "Chinese",
+          "translation": "products",
+          "coherent": true
+        },
+        {
+          "text": "terminус",
+          "language": "Russian",
+          "translation": "terminus",
+          "coherent": true
+        },
+        {
+          "text": "酸",
+          "language": "Chinese",
+          "translation": "acid",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_0",
+      "file": "streamlit_runs/20251017_192243_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "ывают",
+          "language": "Russian",
+          "translation": "are",
+          "coherent": true
+        },
+        {
+          "text": "用餐的分大小",
+          "language": "Chinese",
+          "translation": "the size of the division for dining",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_20",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酯",
+          "language": "Chinese",
+          "translation": "ester",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_32",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "呋喃的2,5-二酮",
+          "language": "Chinese",
+          "translation": "furan-2,5-dione",
+          "coherent": true
+        },
+        {
+          "text": "烯醇",
+          "language": "Chinese",
+          "translation": "enol",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_76",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "碳 1",
+          "language": "Chinese",
+          "translation": "Carbon 1",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_78",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 11,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "苯酮",
+          "language": "Chinese",
+          "translation": "benzophenone",
+          "coherent": true
+        },
+        {
+          "text": "芳香环",
+          "language": "Chinese",
+          "translation": "aromatic ring",
+          "coherent": true
+        },
+        {
+          "text": "苯甲酰基",
+          "language": "Chinese",
+          "translation": "benzoyl",
+          "coherent": true
+        },
+        {
+          "text": "苯",
+          "language": "Chinese",
+          "translation": "benzene",
+          "coherent": true
+        },
+        {
+          "text": "加上",
+          "language": "Chinese",
+          "translation": "plus",
+          "coherent": true
+        },
+        {
+          "text": "共",
+          "language": "Chinese",
+          "translation": "total",
+          "coherent": true
+        },
+        {
+          "text": "碳",
+          "language": "Chinese",
+          "translation": "carbon",
+          "coherent": true
+        },
+        {
+          "text": "环",
+          "language": "Chinese",
+          "translation": "ring",
+          "coherent": true
+        },
+        {
+          "text": "比如",
+          "language": "Chinese",
+          "translation": "for example",
+          "coherent": true
+        },
+        {
+          "text": "取代",
+          "language": "Chinese",
+          "translation": "substituted",
+          "coherent": true
+        },
+        {
+          "text": "酮体",
+          "language": "Chinese",
+          "translation": "ketone body",
+          "coherent": true
+        },
+        {
+          "text": "R group",
+          "language": "English",
+          "translation": "R group",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_78",
+      "file": "streamlit_runs/20251020_185640_qwq_gpqa/inference.json",
+      "num_windows": 16,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "苯酰苯基甲酮",
+          "language": "Chinese",
+          "translation": "diphenylpropanone",
+          "coherent": true
+        },
+        {
+          "text": "苯甲醛",
+          "language": "Chinese",
+          "translation": "benzaldehyde",
+          "coherent": true
+        },
+        {
+          "text": "苯基CH2COCH3",
+          "language": "Chinese",
+          "translation": "phenyl-CH2-CO-CH3",
+          "coherent": true
+        },
+        {
+          "text": "苯环",
+          "language": "Chinese",
+          "translation": "benzene ring",
+          "coherent": true
+        },
+        {
+          "text": "结构",
+          "language": "Chinese",
+          "translation": "structure",
+          "coherent": true
+        },
+        {
+          "text": "苯甲醚与酮基结构",
+          "language": "Chinese",
+          "translation": "structure of phenyl methyl ether and ketone",
+          "coherent": true
+        },
+        {
+          "text": "不对",
+          "language": "Chinese",
+          "translation": "not right",
+          "coherent": true
+        },
+        {
+          "text": "一个苯环",
+          "language": "Chinese",
+          "translation": "one benzene ring",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_53",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "mixed",
+      "segments": [
+        {
+          "text": "碳1: double bond to 2.",
+          "language": "Chinese",
+          "translation": "Carbon 1: double bond to 2.",
+          "coherent": true
+        },
+        {
+          "text": "1 an",
+          "language": "English",
+          "translation": "1 and",
+          "coherent": false
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_20",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "氢",
+          "language": "Chinese",
+          "translation": "hydrogen",
+          "coherent": true
+        },
+        {
+          "text": "羟基",
+          "language": "Chinese",
+          "translation": "hydroxyl",
+          "coherent": true
+        },
+        {
+          "text": "羧酸",
+          "language": "Chinese",
+          "translation": "carboxylic acid",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_31",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "市值可能要求的单位，但问题later单位可能为 MeV?",
+          "language": "Chinese",
+          "translation": "The unit of value may be required, but the question later may be in MeV?",
+          "coherent": true
+        },
+        {
+          "text": "看问题是否要求单位前，可能原题希望以MeV表示，但通常(colliders use GeV，especially for nuclei).",
+          "language": "Chinese",
+          "translation": "Check if the question requires the unit first; the original question may hope to express it in MeV, but usually (colliders use GeV, especially for nuclei).",
+          "coherent": true
+        },
+        {
+          "text": "或者可能问题假设 nucleus的能量能量计算为总-energy per nucleus以MeV为单位。",
+          "language": "Chinese",
+          "translation": "Or the question may assume that the energy of the nucleus is calculated as total energy per nucleus in MeV.",
+          "coherent": true
+        },
+        {
+          "text": "在问题中，可能用MeV.",
+          "language": "Chinese",
+          "translation": "In the question, it may use MeV.",
+          "coherent": true
+        },
+        {
+          "text": "四舍五入到第四个小数位将是20010.8980 MeV, since the fifth decimal is 7, so the fourth is 9 (+1给7上，所以20010.898?",
+          "language": "Chinese",
+          "translation": "Rounding to the fourth decimal place will be 20010.8980 MeV, since the fifth decimal is 7, so the fourth is 9 (+1 for the 7, so 20010.898?",
+          "coherent": true
+        },
+        {
+          "text": "20010.8979是写成 小数点后 fourth小数位?",
+          "language": "Chinese",
+          "translation": "Is 20010.8979 written as the fourth decimal place after the decimal point?",
+          "coherent": true
+        },
+        {
+          "text": "Wait the precise number we had was 20010.89789 MeV.",
+          "language": "English",
+          "translation": "Wait, the precise number we had was 20010.89789 MeV.",
+          "coherent": true
+        },
+        {
+          "text": "因此四舍五入到第四小数位是: The fourth decimal is8 (from the third decimal places: the number is ... .897(8)9.",
+          "language": "Chinese",
+          "translation": "Therefore, rounding to the fourth decimal place is: The fourth decimal is 8 (from the third decimal places: the number is ... .897(8)9.",
+          "coherent": true
+        },
+        {
+          "text": "Wait perhaps it should be: 20,010.89789",
+          "language": "English",
+          "translation": "Wait, perhaps it should be: 20,010.89789",
+          "coherent": true
+        },
+        {
+          "text": "是：20010.8978 | 9 , so四舍五入到第四小数位即四个 decimal places 是:",
+          "language": "Chinese",
+          "translation": "Is: 20010.8978 | 9, so rounding to the fourth decimal place means four decimal places are:",
+          "coherent": true
+        },
+        {
+          "text": "所以 the forth decimal is the 8， followed by 9， so the fourth decimal is8 +1, 即9.",
+          "language": "Chinese",
+          "translation": "So the fourth decimal is the 8, followed by 9, so the fourth decimal is 8 + 1, which is 9.",
+          "coherent": true
+        },
+        {
+          "text": "所以四舍五入到 four decimal places 是 20010.8979.",
+          "language": "Chinese",
+          "translation": "So rounding to four decimal places is 20010.8979.",
+          "coherent": true
+        },
+        {
+          "text": "因此 the final answer is \boxed{20.0109} GeV.",
+          "language": "English",
+          "translation": "Therefore, the final answer is \boxed{20.0109} GeV.",
+          "coherent": true
+        },
+        {
+          "text": "不过要确保问题没有要求MeV单位，但没提到，所以可能两者皆可，但通常GeV更可能。",
+          "language": "Chinese",
+          "translation": "But make sure the question does not require the MeV unit, as it is not mentioned, so both may be acceptable, but usually GeV is more likely.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_41",
+      "file": "streamlit_runs/20251017_172954_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "M1⽔星",
+          "language": "Chinese",
+          "translation": "M1 Jupiter",
+          "coherent": true
+        },
+        {
+          "text": "T比率(T1:T2)",
+          "language": "Chinese",
+          "translation": "T ratio (T1:T2)",
+          "coherent": true
+        },
+        {
+          "text": "T比率(T2:T3)",
+          "language": "Chinese",
+          "translation": "T ratio (T2:T3)",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_33",
+      "file": "streamlit_runs/20251017_192243_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酮",
+          "language": "Chinese",
+          "translation": "ketone",
+          "coherent": true
+        },
+        {
+          "text": "碳1: CH2-",
+          "language": "Chinese",
+          "translation": "Carbon 1: CH2-",
+          "coherent": true
+        },
+        {
+          "text": "碳2: CH2-",
+          "language": "Chinese",
+          "translation": "Carbon 2: CH2-",
+          "coherent": true
+        },
+        {
+          "text": "碳3: C=O",
+          "language": "Chinese",
+          "translation": "Carbon 3: C=O",
+          "coherent": true
+        },
+        {
+          "text": "碳4: CH(phenyl)(methyl)",
+          "language": "Chinese",
+          "translation": "Carbon 4: CH(phenyl)(methyl)",
+          "coherent": true
+        },
+        {
+          "text": "碳5: CH2CH3",
+          "language": "Chinese",
+          "translation": "Carbon 5: CH2CH3",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_88",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "summary": "error",
+      "error": "Unterminated string starting at: line 10 column 15 (char 153)"
+    },
+    {
+      "question_id": "gpqa_61",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": []
+    },
+    {
+      "question_id": "gpqa_88",
+      "file": "streamlit_runs/20260406_174237_qwq_gpqa/inference.json",
+      "num_windows": 6,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "酮 group。",
+          "language": "Chinese",
+          "translation": "ketone group.",
+          "coherent": true
+        },
+        {
+          "text": "不, but that would be high energy).",
+          "language": "Chinese",
+          "translation": "No, but that would be high energy).",
+          "coherent": true
+        },
+        {
+          "text": "没, actually isopropoxide is a strong base.",
+          "language": "Chinese",
+          "translation": "No, actually isopropoxide is a strong base.",
+          "coherent": true
+        },
+        {
+          "text": "等待, no.",
+          "language": "Chinese",
+          "translation": "Wait, no.",
+          "coherent": true
+        },
+        {
+          "text": "这样，",
+          "language": "Chinese",
+          "translation": "Thus,",
+          "coherent": true
+        },
+        {
+          "text": "的 most deshielded proton in product1 is a vinyl group on an enone，则 when ozonolysis occurs in product2’s double bonds, then the final product3 will have the carbonyl groups, the vinyl groups are cleaved. Thus，在 product3中的最去屏蔽的氢可能来自一个共轭的ketone vicinal proton.",
+          "language": "Chinese",
+          "translation": "The most deshielded proton in product1 is a vinyl group on an enone, then when ozonolysis occurs in product2’s double bonds, then the final product3 will have the carbonyl groups, the vinyl groups are cleaved. Thus, the most deshielded hydrogen in product3 may come from a conjugated ketone vicinal proton.",
+          "coherent": true
+        },
+        {
+          "text": "这 will have a triplet: -O-C-O-CH2-...",
+          "language": "Chinese",
+          "translation": "This will have a triplet: -O-C-O-CH2-...",
+          "coherent": true
+        },
+        {
+          "text": "例如, if product2 is a double bond (say, a methyl ketene? 不), perhaps a; if product2 is a diene， then ozonolysis would give two cleavage:",
+          "language": "Chinese",
+          "translation": "For example, if product2 is a double bond (say, a methyl ketene? No), perhaps a; if product2 is a diene, then ozonolysis would give two cleavages:",
+          "coherent": true
+        },
+        {
+          "text": "假设the product2 is a 共轭双烯 (like a 1,3,5- decatriene?), then ozonolysis под правой would give two carbaldehyde groups和中间酮 groups.",
+          "language": "Chinese, Russian",
+          "translation": "Assuming product2 is a conjugated diene (like a 1,3,5-decatriene?), then ozonolysis under the right conditions would give two carbaldehyde groups and intermediate ketone groups.",
+          "coherent": true
+        },
+        {
+          "text": "So the product3可能 would be two formyl groups connected through一些 CH2 groups带有 ketone?",
+          "language": "Chinese",
+          "translation": "So product3 might be two formyl groups connected through some CH2 groups with ketone?",
+          "coherent": true
+        },
+        {
+          "text": "如: the initial adamantane derivative is a norbornan-5-one with a double bond adjacent to it, like:",
+          "language": "Chinese",
+          "translation": "For example: the initial adamantane derivative is a norbornan-5-one with a double bond adjacent to it, like:",
+          "coherent": true
+        },
+        {
+          "text": "其实 this is uncertain, but perhaps the most significant leap is that the most deshielded proton in product3 is a methylene proton, which is coupled with multiple邻近核.",
+          "language": "Chinese",
+          "translation": "Actually, this is uncertain, but perhaps the most significant leap is that the most deshielded proton in product3 is a methylene proton, which is coupled with multiple neighboring nuclei.",
+          "coherent": true
+        },
+        {
+          "text": "或者， perhaps the proton is adjacent to two carbonyl groups?导致它的耦合是 a double由于 two protons on each side, leading to a septet or something else.",
+          "language": "Chinese",
+          "translation": "Alternatively, perhaps the proton is adjacent to two carbonyl groups? This would cause its coupling to be a doublet due to two protons on each side, leading to a septet or something else.",
+          "coherent": true
+        },
+        {
+          "text": "Alternatively, the proton is in a CH2 group adjacent to a carbonyl group so it's a triplet由于 the two Hydrogens on the same碳? but no， that would be a singlet.",
+          "language": "Chinese",
+          "translation": "Alternatively, the proton is in a CH2 group adjacent to a carbonyl group so it's a triplet due to the two Hydrogens on the same carbon? But no, that would be a singlet.",
+          "coherent": true
+        },
+        {
+          "text": "Wait, 如果 it's CH2接下来到 carbonyl, then",
+          "language": "Chinese",
+          "translation": "Wait, if it's CH2 next to carbonyl, then",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_45",
+      "file": "streamlit_runs/20251019_202534_qwq_gpqa/inference.json",
+      "num_windows": 2,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "因此，环的结构是 C2双键到C5，环的其他部分是C3和C4.",
+          "language": "Chinese",
+          "translation": "Therefore, the structure of the ring is a double bond from C2 to C5, and the other parts of the ring are C3 and C4.",
+          "coherent": true
+        },
+        {
+          "text": "因为环中的位置可能需要正确编号.",
+          "language": "Chinese",
+          "translation": "Because the positions in the ring may need to be numbered correctly.",
+          "coherent": true
+        },
+        {
+          "text": "因此，这可能会导致两种不同的环结构，取决于甲基的构型 (R或 S 在C3) 以前的立体化学可能转化为环中的构型.",
+          "language": "Chinese",
+          "translation": "Therefore, this may lead to two different ring structures, depending on the configuration of the methyl group (R or S at C3) as the previous stereochemistry may convert to the configuration in the ring.",
+          "coherent": true
+        },
+        {
+          "text": "此外, 可能还有其他可能的环大小或位置吗?",
+          "language": "Chinese",
+          "translation": "Additionally, are there other possible ring sizes or positions?",
+          "coherent": true
+        },
+        {
+          "text": "例如，是否还有其他环合点？",
+          "language": "Chinese",
+          "translation": "For example, are there other ring-forming points?",
+          "coherent": true
+        },
+        {
+          "text": "如果格鲁布斯催化剂诱导双键异构化而不是形成环, 那么可能有其他产物.",
+          "language": "Chinese",
+          "translation": "If the Grubbs catalyst induces double bond isomerization instead of forming a ring, then there may be other products.",
+          "coherent": true
+        },
+        {
+          "text": "假设双键只能异构化到C2和C3之间的位置 (形成pent-2-ene)，或者移动到C3和C4之间的位置 (pent-3-ene). 如果这些产物可能形成的话.",
+          "language": "Chinese",
+          "translation": "Assuming the double bond can only isomerize to the position between C2 and C3 (forming pent-2-ene), or move to the position between C3 and C4 (pent-3-ene). If these products could form.",
+          "coherent": true
+        },
+        {
+          "text": "原始compound是消旋的，因此两种对映体存在.",
+          "language": "Chinese",
+          "translation": "The original compound is racemic, so two enantiomers exist.",
+          "coherent": true
+        },
+        {
+          "text": "在新位置的双键 (C2-C3):",
+          "language": "Chinese",
+          "translation": "At the new position of the double bond (C2-C3):",
+          "coherent": true
+        },
+        {
+          "text": "所以其构型可能丢失或者变成不同的构型.",
+          "language": "Chinese",
+          "translation": "So its configuration may be lost or become a different configuration.",
+          "coherent": true
+        },
+        {
+          "text": "如果原来的3-甲基pent-1-ene的双键移至2-3的位置，则结构变成：",
+          "language": "Chinese",
+          "translation": "If the double bond of the original 3-methylpent-1-ene is moved to the 2-3 position, then the structure becomes:",
+          "coherent": true
+        },
+        {
+          "text": "因此四个不同的groups：双键的端口 (视为一个取代基，但可能不算为立体中心因为它参与双键).",
+          "language": "Chinese",
+          "translation": "Therefore, four different groups: the end of the double bond (considered as one substituent, but may not count as a stereocenter because it is involved in the double bond).",
+          "coherent": true
+        },
+        {
+          "text": "在这种情况下，the carbon3可能 no longer是 chiral由于双键.",
+          "language": "Chinese",
+          "translation": "In this case, carbon 3 may no longer be chiral due to the double bond.",
+          "coherent": true
+        },
+        {
+          "text": "因此，该product is no longer chiral那里, but the overall molecule may still have other stereochemistry.",
+          "language": "Chinese",
+          "translation": "Therefore, the product is no longer chiral there, but the overall molecule may still have other stereochemistry.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_22",
+      "file": "streamlit_runs/20251019_191941_qwq_gpqa/inference.json",
+      "num_windows": 3,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "碳1：O-CH₂-",
+          "language": "Chinese",
+          "translation": "Carbon 1: O-CH₂-",
+          "coherent": true
+        },
+        {
+          "text": "碳2：C（CH₃）₂（CH₂?）",
+          "language": "Chinese",
+          "translation": "Carbon 2: C(CH₃)₂ (CH₂?)",
+          "coherent": true
+        },
+        {
+          "text": "位置1 (attached to O): CH2-",
+          "language": "Chinese",
+          "translation": "Position 1 (attached to O): CH2-",
+          "coherent": true
+        },
+        {
+          "text": "位置2: C(CH3)2- （since 2,2-dimethyl）",
+          "language": "Chinese",
+          "translation": "Position 2: C(CH3)2- (since 2,2-dimethyl)",
+          "coherent": true
+        },
+        {
+          "text": "碳3连接到 Carbon2,并和 Carbon4有双键.",
+          "language": "Chinese",
+          "translation": "Carbon 3 is connected to Carbon 2 and has a double bond with Carbon 4.",
+          "coherent": true
+        },
+        {
+          "text": "因此，the double bond is between carbon3和carbon4.",
+          "language": "Chinese",
+          "translation": "Therefore, the double bond is between carbon 3 and carbon 4.",
+          "coherent": true
+        },
+        {
+          "text": "碳3和carbon4之间是双键。",
+          "language": "Chinese",
+          "translation": "There is a double bond between carbon 3 and carbon 4.",
+          "coherent": true
+        },
+        {
+          "text": "Carbon2是 CH(CH3)2 吗？",
+          "language": "Chinese",
+          "translation": "Is Carbon 2 CH(CH3)2?",
+          "coherent": true
+        },
+        {
+          "text": "Carbon2是 connected to Carbon1 （CH2-），两个甲基， and connected to carbon3， which is双键到carbon4?",
+          "language": "Chinese",
+          "translation": "Carbon 2 is connected to Carbon 1 (CH2-), has two methyl groups, and is connected to Carbon 3, which is double bonded to Carbon 4?",
+          "coherent": true
+        },
+        {
+          "text": "因此，Carbon3和carbon4之间是双键，",
+          "language": "Chinese",
+          "translation": "Therefore, there is a double bond between Carbon 3 and Carbon 4,",
+          "coherent": true
+        },
+        {
+          "text": "因此，the substituent is：",
+          "language": "Chinese",
+          "translation": "Therefore, the substituent is:",
+          "coherent": true
+        },
+        {
+          "text": "O-CH₂-C(CH3)2-CH2- CH2 ?",
+          "language": "Chinese",
+          "translation": "O-CH₂-C(CH3)2-CH2- CH2?",
+          "coherent": true
+        },
+        {
+          "text": "不是，因为存在烯键在第三和第四碳之间。",
+          "language": "Chinese",
+          "translation": "No, because there is a double bond between the third and fourth carbons.",
+          "coherent": true
+        },
+        {
+          "text": "因此，the substituent is：",
+          "language": "Chinese",
+          "translation": "Therefore, the substituent is:",
+          "coherent": true
+        },
+        {
+          "text": "O-CH₂-C(CH3)2-CH2-C=CH",
+          "language": "Chinese",
+          "translation": "O-CH₂-C(CH3)2-CH2-C=CH",
+          "coherent": true
+        },
+        {
+          "text": "Wait， no, the double bond between carbon3和4 会是：",
+          "language": "Chinese",
+          "translation": "Wait, no, the double bond between carbon 3 and 4 would be:",
+          "coherent": true
+        },
+        {
+          "text": "carbon3 could be CH-， and carbon4 could be CH, forming a double bond.",
+          "language": "English",
+          "translation": "carbon 3 could be CH-, and carbon 4 could be CH, forming a double bond.",
+          "coherent": true
+        },
+        {
+          "text": "Wait this is getting too tangled.",
+          "language": "English",
+          "translation": "Wait this is getting too tangled.",
+          "coherent": true
+        },
+        {
+          "text": "Alternatively, maybe it's better to think that but-3-en-1-yl has the double bond between carbons at positions3 and4.",
+          "language": "English",
+          "translation": "Alternatively, maybe it's better to think that but-3-en-1-yl has the double bond between carbons at positions 3 and 4.",
+          "coherent": true
+        },
+        {
+          "text": "The但烯基 is four carbons, with double bond at C3-C4, attached at C1 (attached to oxygen).",
+          "language": "Chinese",
+          "translation": "The butenyl group is four carbons, with a double bond at C3-C4, attached at C1 (attached to oxygen).",
+          "coherent": true
+        },
+        {
+          "text": "The substituent位于C2 with two methyl groups.",
+          "language": "Chinese",
+          "translation": "The substituent is located at C2 with two methyl groups.",
+          "coherent": true
+        },
+        {
+          "text": "因此， the substituent structure would be:",
+          "language": "Chinese",
+          "translation": "Therefore, the substituent structure would be:",
+          "coherent": true
+        },
+        {
+          "text": "O- CH₂-C(CH₂-) but no.",
+          "language": "Chinese",
+          "translation": "O- CH₂-C(CH₂-) but no.",
+          "coherent": true
+        },
+        {
+          "text": "Alternatively, to form a 4-carbon butenyl group with dimethyl substituents on carbon2:",
+          "language": "English",
+          "translation": "Alternatively, to form a 4-carbon butenyl group with dimethyl substituents on carbon 2:",
+          "coherent": true
+        },
+        {
+          "text": "O connected to CH2, then carbon2是 C(CH3)₂ and then connecting to carbon3 and carbon4 with a double bond.",
+          "language": "Chinese",
+          "translation": "O connected to CH2, then carbon 2 is C(CH3)₂ and then connecting to carbon 3 and carbon 4 with a double bond.",
+          "coherent": true
+        },
+        {
+          "text": "Thus:",
+          "language": "English",
+          "translation": "Thus:",
+          "coherent": true
+        },
+        {
+          "text": "Structure:",
+          "language": "English",
+          "translation": "Structure:",
+          "coherent": true
+        },
+        {
+          "text": "O - CH2 - C(CH3)2 - CH2 - CH2 ?",
+          "language": "English",
+          "translation": "O - CH2 - C(CH3)2 - CH2 - CH2?",
+          "coherent": true
+        },
+        {
+          "text": "But with the double bond between carbon3 and carbon4:",
+          "language": "English",
+          "translation": "But with the double bond between carbon 3 and carbon 4:",
+          "coherent": true
+        },
+        {
+          "text": "Wait that would be a but-烯-3-en?",
+          "language": "Chinese",
+          "translation": "Wait that would be a but-3-en?",
+          "coherent": true
+        },
+        {
+          "text": "Wait如果 the double bond is between carbon3和4， then the last两个 carbons are双键， so:",
+          "language": "Chinese",
+          "translation": "Wait if the double bond is between carbon 3 and 4, then the last two carbons are double bonded, so:",
+          "coherent": true
+        },
+        {
+          "text": "carbon1: O-CH2-",
+          "language": "English",
+          "translation": "carbon 1: O-CH2-",
+          "coherent": true
+        },
+        {
+          "text": "carbon2: C(CH3)2",
+          "language": "English",
+          "translation": "carbon 2: C(CH3)2",
+          "coherent": true
+        },
+        {
+          "text": "carbon3: connected via double bond to carbon4.",
+          "language": "English",
+          "translation": "carbon 3: connected via double bond to carbon 4.",
+          "coherent": true
+        },
+        {
+          "text": "因此，Carbon3和 Carbon4的结构是 double bond，",
+          "language": "Chinese",
+          "translation": "Therefore, the structure of Carbon 3 and Carbon 4 is a double bond,",
+          "coherent": true
+        },
+        {
+          "text": "因此， the substituent would be:",
+          "language": "Chinese",
+          "translation": "Therefore, the substituent would be:",
+          "coherent": true
+        },
+        {
+          "text": "OCH2-C(CH3)2-CH2-C(=CH2?)",
+          "language": "Chinese",
+          "translation": "OCH2-C(CH3)2-CH2-C(=CH2?)",
+          "coherent": true
+        },
+        {
+          "text": "Wait， no, the double bond between carbon3和4 会是：",
+          "language": "Chinese",
+          "translation": "Wait, no, the double bond between carbon 3 and 4 would be:",
+          "coherent": true
+        },
+        {
+          "text": "carbon3 could be CH-， and carbon4 could be CH, forming a double bond.",
+          "language": "English",
+          "translation": "carbon 3 could be CH-, and carbon 4 could be CH, forming a double bond.",
+          "coherent": true
+        },
+        {
+          "text": "Wait this is getting too tangled.",
+          "language": "English",
+          "translation": "Wait this is getting too tangled.",
+          "coherent": true
+        },
+        {
+          "text": "Maybe I need to draw it differently.",
+          "language": "English",
+          "translation": "Maybe I need to draw it differently.",
+          "coherent": true
+        },
+        {
+          "text": "这样， the substituent is这样的：",
+          "language": "Chinese",
+          "translation": "Thus, the substituent is as follows:",
+          "coherent": true
+        },
+        {
+          "text": "The substituent:",
+          "language": "English",
+          "translation": "The substituent:",
+          "coherent": true
+        },
+        {
+          "text": "O attached to CH2 (carbon1),",
+          "language": "English",
+          "translation": "O attached to CH2 (carbon 1),",
+          "coherent": true
+        },
+        {
+          "text": "Carbon2 is C(CH2-) ?",
+          "language": "Chinese",
+          "translation": "Carbon 2 is C(CH2-)?",
+          "coherent": true
+        },
+        {
+          "text": "Wait no，具体来说：",
+          "language": "Chinese",
+          "translation": "Wait no, specifically:",
+          "coherent": true
+        },
+        {
+          "text": "O-CH₂-C(CH₃)₂-CH₂=CH₂， this would make the但烯-3-en-1-yl group。",
+          "language": "Chinese",
+          "translation": "O-CH₂-C(CH₃)₂-CH₂=CH₂, this would make the but-3-en-1-yl group.",
+          "coherent": true
+        },
+        {
+          "text": "因此， the substituent is：",
+          "language": "Chinese",
+          "translation": "Therefore, the substituent is:",
+          "coherent": true
+        },
+        {
+          "text": "Vinyl group at the end connected via double bond.",
+          "language": "English",
+          "translation": "Vinyl group at the end connected via double bond.",
+          "coherent": true
+        },
+        {
+          "text": "这样，当它与 HBr反应，按 Markovnikov's rule, the溴会附着在double bond的 more subs",
+          "language": "Chinese",
+          "translation": "Thus, when it reacts with HBr, according to Markovnikov's rule, the bromine will attach to the more substituted side of the double bond.",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_30",
+      "file": "streamlit_runs/20251017_230836_qwq_gpqa/inference.json",
+      "summary": "error",
+      "error": "Unterminated string starting at: line 3060 column 22 (char 60264)"
+    },
+    {
+      "question_id": "gpqa_63",
+      "file": "streamlit_runs/20251020_221724_qwq_gpqa/inference.json",
+      "num_windows": 1,
+      "summary": "coherent",
+      "segments": [
+        {
+          "text": "H2O总量",
+          "language": "Chinese",
+          "translation": "Total amount of H2O",
+          "coherent": true
+        },
+        {
+          "text": "但 O2 is not enough",
+          "language": "Chinese",
+          "translation": "But O2 is not enough",
+          "coherent": true
+        },
+        {
+          "text": "而问题中 O2的量0.025 mol",
+          "language": "Chinese",
+          "translation": "And the amount of O2 in the problem is 0.025 mol",
+          "coherent": true
+        },
+        {
+          "text": "这还需要其他的来源",
+          "language": "Chinese",
+          "translation": "This still requires other sources",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "加热分解产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition produces",
+          "coherent": true
+        },
+        {
+          "text": "每个SaltA的摩尔分解产生0.5 O₂",
+          "language": "Chinese",
+          "translation": "Each mole of SaltA produces 0.5 O₂",
+          "coherent": true
+        },
+        {
+          "text": "总反应",
+          "language": "Chinese",
+          "translation": "Total reaction",
+          "coherent": true
+        },
+        {
+          "text": "这是两倍",
+          "language": "Chinese",
+          "translation": "This is double",
+          "coherent": true
+        },
+        {
+          "text": "可能我应该通过the equations来解",
+          "language": "Chinese",
+          "translation": "Maybe I should solve through the equations",
+          "coherent": true
+        },
+        {
+          "text": "因为等摩尔",
+          "language": "Chinese",
+          "translation": "Because of equal moles",
+          "coherent": true
+        },
+        {
+          "text": "但four variables.需要其他 constraints",
+          "language": "Chinese",
+          "translation": "But four variables. Need other constraints",
+          "coherent": true
+        },
+        {
+          "text": "可能我应该直接计算 the number of atoms",
+          "language": "Chinese",
+          "translation": "Maybe I should directly calculate the number of atoms",
+          "coherent": true
+        },
+        {
+          "text": "假设每个盐 has n是0.1 mole",
+          "language": "Chinese",
+          "translation": "Assuming each salt has n as 0.1 mole",
+          "coherent": true
+        },
+        {
+          "text": "盐 A每mol produces 2mol H2O",
+          "language": "Chinese",
+          "translation": "Salt A produces 2 mol H2O per mol",
+          "coherent": true
+        },
+        {
+          "text": "盐 B每mol produces0.25 O₂ and1 N2",
+          "language": "Chinese",
+          "translation": "Salt B produces 0.25 O₂ and 1 N2 per mol",
+          "coherent": true
+        },
+        {
+          "text": "盐A的可能是什么？",
+          "language": "Chinese",
+          "translation": "What could Salt A be?",
+          "coherent": true
+        },
+        {
+          "text": "比如",
+          "language": "Chinese",
+          "translation": "For example",
+          "coherent": true
+        },
+        {
+          "text": "这会进入 tube2和 tube3",
+          "language": "Chinese",
+          "translation": "This will enter tube2 and tube3",
+          "coherent": true
+        },
+        {
+          "text": "若 N2O passes through, it would be part of the remaining gas C.",
+          "language": "English",
+          "translation": "If N2O passes through, it would be part of the remaining gas C.",
+          "coherent": true
+        },
+        {
+          "text": "假设, N2O is part of the remaining",
+          "language": "Chinese",
+          "translation": "Assuming, N2O is part of the remaining",
+          "coherent": true
+        },
+        {
+          "text": "加上 other remaining gases",
+          "language": "Chinese",
+          "translation": "Plus other remaining gases",
+          "coherent": true
+        },
+        {
+          "text": "但这个假设可能不 fit",
+          "language": "Chinese",
+          "translation": "But this assumption may not fit",
+          "coherent": true
+        },
+        {
+          "text": "可能是",
+          "language": "Chinese",
+          "translation": "Maybe",
+          "coherent": true
+        },
+        {
+          "text": "盐B的每 mole produce1 N2",
+          "language": "Chinese",
+          "translation": "Each mole of Salt B produces 1 N2",
+          "coherent": true
+        },
+        {
+          "text": "假设 SaltB是 NaN3",
+          "language": "Chinese",
+          "translation": "Assuming Salt B is NaN3",
+          "coherent": true
+        },
+        {
+          "text": "每摩尔产生产1.5 N2",
+          "language": "Chinese",
+          "translation": "Each mole produces 1.5 N2",
+          "coherent": true
+        },
+        {
+          "text": "但与上述",
+          "language": "Chinese",
+          "translation": "But with the above",
+          "coherent": true
+        },
+        {
+          "text": "我们需要 per mole produce1 N2",
+          "language": "Chinese",
+          "translation": "We need to produce 1 N2 per mole",
+          "coherent": true
+        },
+        {
+          "text": "可能盐B是不同的",
+          "language": "Chinese",
+          "translation": "Maybe Salt B is different",
+          "coherent": true
+        },
+        {
+          "text": "如:",
+          "language": "Chinese",
+          "translation": "Such as:",
+          "coherent": true
+        },
+        {
+          "text": "盐 B could be NaN3分解成",
+          "language": "Chinese",
+          "translation": "Salt B could decompose into NaN3",
+          "coherent": true
+        },
+        {
+          "text": "所以 per mole是1.5",
+          "language": "Chinese",
+          "translation": "So per mole is 1.5",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "可能是",
+          "language": "Chinese",
+          "translation": "Maybe",
+          "coherent": true
+        },
+        {
+          "text": "如果假设盐B是 KN3",
+          "language": "Chinese",
+          "translation": "If assuming Salt B is KN3",
+          "coherent": true
+        },
+        {
+          "text": "类似",
+          "language": "Chinese",
+          "translation": "Similar",
+          "coherent": true
+        },
+        {
+          "text": "但不常见",
+          "language": "Chinese",
+          "translation": "But not common",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "可能",
+          "language": "Chinese",
+          "translation": "Maybe",
+          "coherent": true
+        },
+        {
+          "text": "假设盐A是NH4Cl and Salt B是另一个",
+          "language": "Chinese",
+          "translation": "Assuming Salt A is NH4Cl and Salt B is another",
+          "coherent": true
+        },
+        {
+          "text": "但此前尝试",
+          "language": "Chinese",
+          "translation": "But previously tried",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是Na2CO3分解进CO2和 H2O",
+          "language": "Chinese",
+          "translation": "Or Salt A is Na2CO3 decomposing into CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但 tube2 would react",
+          "language": "Chinese",
+          "translation": "But tube2 would react",
+          "coherent": true
+        },
+        {
+          "text": "不可能",
+          "language": "Chinese",
+          "translation": "Not possible",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设盐A是NH4Cl and Salt B是另一个",
+          "language": "Chinese",
+          "translation": "Assuming Salt A is NH4Cl and Salt B is another",
+          "coherent": true
+        },
+        {
+          "text": "但此前尝试",
+          "language": "Chinese",
+          "translation": "But previously tried",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是Na2CO3分解进CO2和 H2O",
+          "language": "Chinese",
+          "translation": "Or Salt A is Na2CO3 decomposing into CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但 tube2 would react",
+          "language": "Chinese",
+          "translation": "But tube2 would react",
+          "coherent": true
+        },
+        {
+          "text": "不可能",
+          "language": "Chinese",
+          "translation": "Not possible",
+          "coherent": true
+        },
+        {
+          "text": "假设盐A是NH4HCO3",
+          "language": "Chinese",
+          "translation": "Assuming Salt A is NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        },
+        {
+          "text": "假设 saltA 是 Fe(NO3)3",
+          "language": "Chinese",
+          "translation": "Assuming salt A is Fe(NO3)3",
+          "coherent": true
+        },
+        {
+          "text": "加热分解可能产生",
+          "language": "Chinese",
+          "translation": "Heating decomposition may produce",
+          "coherent": true
+        },
+        {
+          "text": "这样",
+          "language": "Chinese",
+          "translation": "Thus",
+          "coherent": true
+        },
+        {
+          "text": "每 mole会 produce1.5 O2",
+          "language": "Chinese",
+          "translation": "Each mole will produce 1.5 O2",
+          "coherent": true
+        },
+        {
+          "text": "但不对",
+          "language": "Chinese",
+          "translation": "But not correct",
+          "coherent": true
+        },
+        {
+          "text": "假设",
+          "language": "Chinese",
+          "translation": "Assuming",
+          "coherent": true
+        },
+        {
+          "text": "可能盐A是H2O产生的盐",
+          "language": "Chinese",
+          "translation": "Maybe Salt A is a salt that produces H2O",
+          "coherent": true
+        },
+        {
+          "text": "比如 NH4HCO3",
+          "language": "Chinese",
+          "translation": "For example, NH4HCO3",
+          "coherent": true
+        },
+        {
+          "text": "这会 produce CO2和H2O",
+          "language": "Chinese",
+          "translation": "This will produce CO2 and H2O",
+          "coherent": true
+        },
+        {
+          "text": "但因为 tube2 didn't react",
+          "language": "Chinese",
+          "translation": "But because tube2 didn't react",
+          "coherent": true
+        },
+        {
+          "text": "所以 不可能",
+          "language": "Chinese",
+          "translation": "So it's not possible",
+          "coherent": true
+        },
+        {
+          "text": "或者盐A是 MgSO4*7H₂O",
+          "language": "Chinese",
+          "translation": "Or Salt A is MgSO4*7H₂O",
+          "coherent": true
+        },
+        {
+          "text": "加热释放7 H2O per formula unit",
+          "language": "Chinese",
+          "translation": "Heating releases 7 H2O per formula unit",
+          "coherent": true
+        },
+        {
+          "text": "但这样",
+          "language": "Chinese",
+          "translation": "But this way",
+          "coherent": true
+        },
+        {
+          "text": "每 mole盐会产生7 H2O",
+          "language": "Chinese",
+          "translation": "Each mole of salt will produce 7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "然后 n为0.1",
+          "language": "Chinese",
+          "translation": "Then n is 0.1",
+          "coherent": true
+        },
+        {
+          "text": "盐 produces 0.7 H2O",
+          "language": "Chinese",
+          "translation": "Salt produces 0.7 H2O",
+          "coherent": true
+        },
+        {
+          "text": "这超过 needed0.2",
+          "language": "Chinese",
+          "translation": "This exceeds the needed 0.2",
+          "coherent": true
+        },
+        {
+          "text": "不合适",
+          "language": "Chinese",
+          "translation": "Not suitable",
+          "coherent": true
+        }
+      ]
+    },
+    {
+      "question_id": "gpqa_94",
+      "file": "streamlit_runs/20251016_011742_qwq_gpqa/inference.json",
+      "summary": "error",
+      "error": "Expecting property name enclosed in double quotes: line 3065 column 29 (char 56785)"
+    },
+    {
+      "question_id": "gpqa_27",
+      "file": "streamlit_runs/20251020_232429_qwq_gpqa/inference.json",
+      "summary": "error",
+      "error": "Expecting property name enclosed in double quotes: line 2730 column 37 (char 55481)"
+    }
+  ]
+}
