@@ -1,3 +1,16 @@
+"""
+Tests whether prefilling works by checking the first token of model output.
+
+Strategy: end the prefill mid-token so the expected continuation is unambiguous.
+  "15 + 27 = 4" -> if prefill works, first token is "3" (completing "43")
+
+Tests:
+  1. Chat API, open think
+  2. Chat API, closed think
+  3. Completions API, open think
+  4. Completions API, closed think
+"""
+
 import os
 
 from dotenv import load_dotenv
@@ -5,90 +18,94 @@ from openai import OpenAI
 
 load_dotenv()
 
-GPQA_QUESTION = """Which of the following molecules has C3h symmetry?
-A) triisopropyl borate
-B) quinuclidine
-C) benzo[1,2-c:3,4-c':5,6-c'']trifuran-1,3,4,6,7,9-hexaone
-D) triphenyleno[1,2-c:5,6-c':9,10-c'']trifuran-1,3,6,8,11,13-hexaone"""
+QUESTION = "What is 15 + 27? Answer with only the number."
+OPEN_PREFILL = "<think>\n15 + 27 = 4"
+CLOSED_PREFILL = "<think>\n15 + 27 = 43\n</think>\n4"
 
-GPQA_QUESTION_SWITCHED = """Which of the following molecules has C3h symmetry?
-A) benzo[1,2-c:3,4-c':5,6-c'']trifuran-1,3,4,6,7,9-hexaone
-B) triphenyleno[1,2-c:5,6-c':9,10-c'']trifuran-1,3,6,8,11,13-hexaone
-C) triisopropyl borate
-D) quinuclidine"""
+CHAT_TEMPLATES = {
+    "qwq": "<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n{prefill}",
+    "r1": "<｜begin▁of▁sentence｜><｜User｜>{question}<｜Assistant｜>{prefill}",
+}
+
+MODEL_IDS = {
+    "qwq": "qwen/qwq-32b",
+    "r1": "deepseek/deepseek-r1",
+}
+
+PROVIDERS = {
+    "qwq": ["siliconflow/fp8"],
+    "r1": ["novita/fp8"],
+}
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ["OPENROUTER_API_KEY"],
+    timeout=120.0,
+)
 
 
-def call_model(model, question, prefill=None, include_reasoning=False):
-    """
-    Call R1 or QwQ with optional prefill.
+def check_first_token(output, expected="3"):
+    first_char = output.lstrip()[0] if output.strip() else ""
+    passed = first_char == expected
+    status = "PASS" if passed else "FAIL"
+    print(f"  FIRST TOKEN CHECK: {status} (expected '{expected}', got '{first_char}')")
+    return passed
 
-    Args:
-        model: "r1" or "qwq"
-        question: The question text
-        prefill: Optional reasoning to prefill (will be wrapped in <think> tags)
-        include_reasoning: Whether to include reasoning in response
 
-    Returns:
-        dict with 'reasoning', 'content', 'tokens'
-    """
-    client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=os.getenv("OPENROUTER_API_KEY"),
-        timeout=600.0,
-    )
-
-    model_configs = {
-        "r1": {"model": "deepseek/deepseek-r1", "provider": ["deepinfra/base"]},
-        "qwq": {"model": "qwen/qwq-32b", "provider": ["deepinfra/bf16", "nebius/fp8"]},
+def run_chat(model_key, prefill_content, label):
+    print(f"\n{'=' * 60}\n{label}\n{'=' * 60}")
+    model = MODEL_IDS[model_key]
+    messages = [
+        {"role": "user", "content": QUESTION},
+        {"role": "assistant", "content": prefill_content},
+    ]
+    extra_body = {
+        "provider": {"order": PROVIDERS[model_key], "allow_fallbacks": False},
+        "reasoning": {"enabled": False, "max_tokens": 0},
     }
-
-    config = model_configs[model]
-
-    messages = [{"role": "user", "content": question}]
-    if prefill:
-        messages.append(
-            {"role": "assistant", "content": f"<think>\n{prefill}\n</think>"}
+    try:
+        resp = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            extra_body=extra_body,
         )
+        msg = resp.choices[0].message
+        reasoning = getattr(msg, "reasoning", None) or ""
+        content = msg.content or ""
+        print(f"  reasoning ({len(reasoning)} chars): {reasoning[:200]}")
+        print(f"  content: {content[:200]}")
+        output = reasoning + content
+        check_first_token(output)
+    except Exception as e:
+        print(f"  ERROR: {e}")
 
-    extra_body = {"provider": {"order": config["provider"], "allow_fallbacks": False}}
 
-    if include_reasoning:
-        extra_body["reasoning"] = {"max_tokens": 30000}
-    else:
-        extra_body["reasoning"] = {"enabled": False, "max_tokens": 0}
-
-    completion = client.chat.completions.create(
-        model=config["model"],
-        messages=messages,
-        temperature=1.0,
-        max_tokens=100000,
-        extra_body=extra_body,
-    )
-
-    msg = completion.choices[0].message
-    return {
-        "reasoning": getattr(msg, "reasoning", None),
-        "content": msg.content,
-        "tokens": completion.usage.total_tokens,
+def run_completion(model_key, prefill, label):
+    print(f"\n{'=' * 60}\n{label}\n{'=' * 60}")
+    model = MODEL_IDS[model_key]
+    prompt = CHAT_TEMPLATES[model_key].format(question=QUESTION, prefill=prefill)
+    extra_body = {
+        "provider": {"order": PROVIDERS[model_key], "allow_fallbacks": False},
     }
+    try:
+        resp = client.completions.create(
+            model=model,
+            prompt=prompt,
+            extra_body=extra_body,
+        )
+        output = resp.choices[0].text
+        print(f"  raw output ({len(output)} chars): {output[:300]}")
+        check_first_token(output)
+    except Exception as e:
+        print(f"  ERROR: {e}")
 
 
 if __name__ == "__main__":
-    # Example: Sample reasoning from R1, then use as prefill
-    print("Step 1: Sample reasoning from R1 on original question")
-    result1 = call_model("r1", GPQA_QUESTION, include_reasoning=True)
-    print(f"Reasoning:\n{result1['reasoning'] if result1['reasoning'] else 0}")
-    print(f"\n\n---\n\nAnswer:\n{result1['content']}")
-    print(f"Tokens: {result1['tokens']}\n")
-
-    print(
-        "Step 2: Use that reasoning as prefill with switched options (reasoning disabled)"
-    )
-    result2 = call_model(
-        "r1",
-        GPQA_QUESTION_SWITCHED,
-        prefill=result1["reasoning"],
-        include_reasoning=False,
-    )
-    print(f"\n\n---\n\nReasoning returned: {result2['reasoning']}")
-    print(f"\n\n---\n\nAnswer: {result2['content']}")
+    for model_key in ["r1", "qwq"]:
+        name = model_key.upper()
+        run_chat(model_key, OPEN_PREFILL, f"{name} — Chat API, open think")
+        run_chat(model_key, CLOSED_PREFILL, f"{name} — Chat API, closed think")
+        run_completion(model_key, OPEN_PREFILL, f"{name} — Completions API, open think")
+        run_completion(
+            model_key, CLOSED_PREFILL, f"{name} — Completions API, closed think"
+        )

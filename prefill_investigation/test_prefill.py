@@ -120,20 +120,20 @@ def main():
         extra_body,
     )
 
-    run_chat(
-        args.model,
-        [
-            {"role": "user", "content": QUESTION},
-            {
-                "role": "assistant",
-                "content": "",
-                "reasoning_details": [{"type": "reasoning", "text": BAD_REASONING}],
-            },
-        ],
-        "VARIANT B: reasoning_details field (expect answer=43 if prefill works)",
-        extra_body,
-        check_reasoning_starts_with=BAD_REASONING,
-    )
+    # run_chat(
+    #     args.model,
+    #     [
+    #         {"role": "user", "content": QUESTION},
+    #         {
+    #             "role": "assistant",
+    #             "content": "",
+    #             "reasoning_details": [{"type": "reasoning", "text": BAD_REASONING}],
+    #         },
+    #     ],
+    #     "VARIANT B: reasoning_details field (expect answer=43 if prefill works)",
+    #     extra_body,
+    #     check_reasoning_starts_with=BAD_REASONING,
+    # )
 
     run_chat(
         args.model,
