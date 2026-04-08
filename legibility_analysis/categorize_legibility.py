@@ -176,7 +176,9 @@ def aggregate(explanations: list[dict], classifications: list[list[str]]) -> dic
 
 def main():
     parser = argparse.ArgumentParser(description="Categorize legibility explanations")
-    parser.add_argument("eval_path", help="Path to evaluation.json")
+    parser.add_argument(
+        "eval_paths", nargs="+", help="Path(s) to evaluation.json files"
+    )
     parser.add_argument("--batch-size", type=int, default=30)
     parser.add_argument("--model", default="gpt-4o-mini")
     parser.add_argument("--max-workers", type=int, default=8)
@@ -186,15 +188,25 @@ def main():
     )
     args = parser.parse_args()
 
-    eval_path = Path(args.eval_path)
-    output_dir = Path(args.output_dir) if args.output_dir else eval_path.parent
+    eval_paths = [Path(p) for p in args.eval_paths]
+    if args.output_dir:
+        output_dir = Path(args.output_dir)
+    elif len(eval_paths) == 1:
+        output_dir = eval_paths[0].parent
+    else:
+        parser.error("--output-dir is required when passing multiple eval files")
+
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     config = get_model_config(args.model)
     provider = get_provider(config["provider"])
 
-    print(f"Loading explanations from {eval_path}")
-    explanations = load_explanations(str(eval_path))
-    print(f"Loaded {len(explanations)} explanations")
+    explanations = []
+    for p in eval_paths:
+        loaded = load_explanations(str(p))
+        print(f"Loaded {len(loaded)} explanations from {p}")
+        explanations.extend(loaded)
+    print(f"Total: {len(explanations)} explanations")
 
     random.seed(42)
     print("Pass 1: Discovering categories...")

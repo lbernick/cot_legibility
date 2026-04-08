@@ -19,22 +19,29 @@ def plot_heatmap(data: dict, output_path: Path):
     # by row sum divided by avg categories per explanation).
     # Instead, just show raw counts in heatmap and note it's count-based.
 
-    # Build matrix: rows=categories, cols=scores
-    top_cats = [c for c in all_cats if data["overall"][c] >= 5]
-    matrix = np.zeros((len(top_cats), len(scores)))
+    top_cats = sorted(
+        [c for c in all_cats if data["overall"][c] >= 5],
+        key=lambda c: -data["overall"][c],
+    )
+
+    raw = np.zeros((len(top_cats), len(scores)))
+    pct = np.zeros((len(top_cats), len(scores)))
     for j, s in enumerate(scores):
         score_counts = data["by_score"][s]
         total = sum(score_counts.values())
         for i, cat in enumerate(top_cats):
-            matrix[i, j] = score_counts.get(cat, 0) / total * 100 if total else 0
+            raw[i, j] = score_counts.get(cat, 0)
+            pct[i, j] = raw[i, j] / total * 100 if total else 0
+
+    annot_labels = np.array([[f"{int(v)}" for v in row] for row in raw])
 
     fig, ax = plt.subplots(figsize=(10, 8))
     sns.heatmap(
-        matrix,
+        pct,
         xticklabels=[f"Score {s}" for s in scores],
         yticklabels=top_cats,
-        annot=True,
-        fmt=".0f",
+        annot=annot_labels,
+        fmt="",
         cmap="YlOrRd",
         cbar_kws={"label": "% of tags at this score"},
         ax=ax,
