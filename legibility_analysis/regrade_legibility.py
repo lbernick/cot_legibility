@@ -1,4 +1,4 @@
-"""Re-grade legibility for R1 gpqa runs using the same code path as the original evaluation."""
+"""Re-grade legibility using multiple grader models to assess inter-grader consistency."""
 
 import argparse
 import sys
@@ -24,6 +24,8 @@ RUNS = [
     "streamlit_runs/20251024_155559_R1-Distill-Qwen-32B_gpqa",
 ]
 
+MAX_WORKERS = 20
+
 
 def make_eval_config(grader_model: str) -> dict:
     return {
@@ -35,24 +37,28 @@ def make_eval_config(grader_model: str) -> dict:
     }
 
 
-MAX_WORKERS = 20
+def output_filename(grader_model: str) -> str:
+    slug = grader_model.lower().replace(" ", "-")
+    return f"evaluation_regrade_{slug}.json"
 
 
 def regrade_run(run_dir: str, grader: Grader, eval_config: dict):
     run_path = Path(run_dir)
     inference_file = run_path / "inference.json"
-    output_file = run_path / "evaluation_regrade.json"
+    out_file = run_path / output_filename(eval_config["grader_model"])
 
     if not inference_file.exists():
         print(f"SKIP {run_dir}: no inference.json")
         return
 
-    if output_file.exists():
-        print(f"SKIP {run_dir}: evaluation_regrade.json already exists")
+    if out_file.exists():
+        print(f"SKIP {run_dir}: {out_file.name} already exists")
         return
 
     items = read_json(inference_file)
-    print(f"\n{'=' * 60}\n{run_dir}: {len(items)} items")
+    print(
+        f"\n{'=' * 60}\n{run_dir} [{eval_config['grader_model']}]: {len(items)} items"
+    )
 
     results = []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
@@ -82,15 +88,15 @@ def regrade_run(run_dir: str, grader: Grader, eval_config: dict):
             "inference_file": str(inference_file),
             "grader_model": eval_config["grader_model"],
             "timestamp": datetime.utcnow().isoformat() + "Z",
-            "purpose": "regrade to check for grader model drift",
+            "purpose": "regrade for inter-grader consistency analysis",
         },
         "results": results,
         "statistics": statistics,
     }
 
-    write_json(output_file, output)
+    write_json(out_file, output)
     leg = statistics.get("legibility", {})
-    print(f"  Saved {output_file}")
+    print(f"  Saved {out_file}")
     if leg:
         print(
             f"  mean={leg['mean']:.2f} std={leg['std']:.2f} median={leg['median']:.1f} n={leg['count']}"
@@ -99,7 +105,11 @@ def regrade_run(run_dir: str, grader: Grader, eval_config: dict):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--grader-model", default="gpt-4o")
+    parser.add_argument(
+        "--grader-models",
+        nargs="+",
+        default=["gpt-4o", "claude-sonnet-4", "claude-haiku-4-5"],
+    )
     parser.add_argument("filters", nargs="*", help="Substrings to filter RUNS")
     args = parser.parse_args()
 
@@ -108,10 +118,12 @@ def main():
         runs = [r for r in RUNS if any(f in r for f in args.filters)]
         print(f"Filtered to {len(runs)} runs")
 
-    eval_config = make_eval_config(args.grader_model)
-    grader = Grader(args.grader_model)
-    for run_dir in runs:
-        regrade_run(run_dir, grader, eval_config)
+    for model_name in args.grader_models:
+        print(f"\n{'#' * 60}\nGrader model: {model_name}\n{'#' * 60}")
+        eval_config = make_eval_config(model_name)
+        grader = Grader(model_name)
+        for run_dir in runs:
+            regrade_run(run_dir, grader, eval_config)
 
 
 if __name__ == "__main__":

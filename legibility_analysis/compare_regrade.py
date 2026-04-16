@@ -25,10 +25,10 @@ RUNS = [
 def compare_run(run_dir: str) -> dict | None:
     run_path = Path(run_dir)
     old_file = run_path / "evaluation.json"
-    new_file = run_path / "evaluation_regrade.json"
+    new_file = run_path / "evaluation_regrade_gpt-4o.json"
 
     if not new_file.exists():
-        print(f"SKIP {run_dir}: no evaluation_regrade.json")
+        print(f"SKIP {run_dir}: no evaluation_regrade_gpt-4o.json")
         return None
 
     old_data = read_json(old_file)
@@ -108,7 +108,7 @@ def main():
     model_scores: dict[str, tuple[list, list]] = {}
     for run_dir in runs:
         run_path = Path(run_dir)
-        new_file = run_path / "evaluation_regrade.json"
+        new_file = run_path / "evaluation_regrade_gpt-4o.json"
         if not new_file.exists():
             continue
         old_data = read_json(run_path / "evaluation.json")
