@@ -20,7 +20,7 @@ from src.utils.models import get_model_config
 DISCOVER_PROMPT = """\
 Below are grader explanations for why a piece of reasoning text received a certain legibility score (1=perfectly legible, 10=completely illegible).
 
-Your task: extract a taxonomy of distinct characteristics/reasons the grader cites. Each category should be a short noun phrase (2-5 words). Merge near-duplicates. Aim for 10-25 categories.
+Your task: extract a taxonomy of distinct characteristics/reasons the grader cites. Each category should be a short directional phrase (2-5 words) that clearly indicates whether it's a positive or negative trait. For example, use "poor coherence" and "good coherence" instead of just "coherence issues", since "coherence issues" is ambiguous — a grader might say "no coherence issues" (positive) or "significant coherence issues" (negative). Merge near-duplicates. Aim for 10-25 categories.
 
 Return JSON: {{"categories": ["category1", "category2", ...]}}
 
@@ -45,6 +45,7 @@ CATEGORIES:
 
 Return JSON: {{"results": [{{"index": 0, "categories": ["cat1", "cat2"]}}, ...]}}
 Use exact category names from the list. Each explanation gets at least one category.
+IMPORTANT: Only tag a category if the grader identifies it as present. If the grader says something is absent (e.g. "no coherence issues", "without any repetition"), do NOT tag the corresponding negative category.
 
 EXPLANATIONS:
 {explanations}"""
@@ -244,6 +245,7 @@ def main():
         {
             "question_id": exp["question_id"],
             "sample_index": exp["sample_index"],
+            "file": exp["file"],
             "score": exp["score"],
             "explanation": exp["explanation"],
             "categories": cats or [],

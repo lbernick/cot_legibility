@@ -1,5 +1,6 @@
 """Re-grade legibility for R1 gpqa runs using the same code path as the original evaluation."""
 
+import argparse
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -19,24 +20,25 @@ RUNS = [
     "streamlit_runs/20251022_003910_R1-Distill-Qwen-32B_gpqa",
     "streamlit_runs/20251022_012813_R1-Distill-Qwen-14B_gpqa",
     "streamlit_runs/20251022_013133_R1-Distill-Qwen-14B_gpqa",
-    # "streamlit_runs/20251024_054931_R1-Zero_gpqa",
     "streamlit_runs/20251024_155133_R1-Distill-Qwen-14B_gpqa",
     "streamlit_runs/20251024_155559_R1-Distill-Qwen-32B_gpqa",
-    # "streamlit_runs/20251024_165858_R1-Zero_gpqa",
 ]
 
-EVAL_CONFIG = {
-    "grade_legibility": True,
-    "grade_correctness": False,
-    "grade_legibility_chunks": False,
-    "max_chars_legibility": 5000,
-    "grader_model": "gpt-4o",
-}
+
+def make_eval_config(grader_model: str) -> dict:
+    return {
+        "grade_legibility": True,
+        "grade_correctness": False,
+        "grade_legibility_chunks": False,
+        "max_chars_legibility": 5000,
+        "grader_model": grader_model,
+    }
+
 
 MAX_WORKERS = 20
 
 
-def regrade_run(run_dir: str, grader: Grader):
+def regrade_run(run_dir: str, grader: Grader, eval_config: dict):
     run_path = Path(run_dir)
     inference_file = run_path / "inference.json"
     output_file = run_path / "evaluation_regrade.json"
@@ -55,7 +57,7 @@ def regrade_run(run_dir: str, grader: Grader):
     results = []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         futures = {
-            executor.submit(grade_item, item, grader, EVAL_CONFIG): item
+            executor.submit(grade_item, item, grader, eval_config): item
             for item in items
         }
         for future in tqdm(
@@ -78,7 +80,7 @@ def regrade_run(run_dir: str, grader: Grader):
     output = {
         "metadata": {
             "inference_file": str(inference_file),
-            "grader_model": EVAL_CONFIG["grader_model"],
+            "grader_model": eval_config["grader_model"],
             "timestamp": datetime.utcnow().isoformat() + "Z",
             "purpose": "regrade to check for grader model drift",
         },
@@ -96,14 +98,20 @@ def regrade_run(run_dir: str, grader: Grader):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--grader-model", default="gpt-4o")
+    parser.add_argument("filters", nargs="*", help="Substrings to filter RUNS")
+    args = parser.parse_args()
+
     runs = RUNS
-    if len(sys.argv) > 1:
-        runs = [r for r in RUNS if any(arg in r for arg in sys.argv[1:])]
+    if args.filters:
+        runs = [r for r in RUNS if any(f in r for f in args.filters)]
         print(f"Filtered to {len(runs)} runs")
 
-    grader = Grader("gpt-4o")
+    eval_config = make_eval_config(args.grader_model)
+    grader = Grader(args.grader_model)
     for run_dir in runs:
-        regrade_run(run_dir, grader)
+        regrade_run(run_dir, grader, eval_config)
 
 
 if __name__ == "__main__":

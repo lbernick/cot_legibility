@@ -42,10 +42,36 @@ python legibility_analysis/categorize_legibility.py streamlit_runs/.../evaluatio
 
 ### `plot_legibility_categories.py`
 
-Plots the output of `categorize_legibility.py` as a normalized heatmap (category prevalence by score) and a horizontal bar chart (overall counts).
+Plots the output of `categorize_legibility.py` as a heatmap (raw counts colored by per-score percentage) and a horizontal bar chart (overall counts). Categories are sorted by overall frequency.
 
 ```bash
 python legibility_analysis/plot_legibility_categories.py streamlit_runs/.../legibility_category_counts.json
+```
+
+### `analyze_language_switching.py`
+
+Samples reasoning texts that contain non-Latin characters (CJK, Cyrillic, Korean), extracts windows around each switch point, and uses an LLM to classify each non-English segment as contextually coherent or incoherent (with translations).
+
+```bash
+python legibility_analysis/analyze_language_switching.py \
+  streamlit_runs/*qwq_gpqa/inference.json \
+  --output-dir legibility_analysis/qwq_gpqa_combined
+```
+
+### `analyze_language_switching_mentions.py`
+
+Analyzes how often grader explanations cite language switching as a legibility factor, and cross-references with actual non-Latin character detection in the reasoning text.
+
+```bash
+python legibility_analysis/analyze_language_switching_mentions.py
+```
+
+### `plot_language_switching.py`
+
+Plots the output of `analyze_language_switching.py` as a pie chart showing the proportion of coherent vs incoherent non-English segments (filtering out English and error results).
+
+```bash
+python legibility_analysis/plot_language_switching.py legibility_analysis/qwq_gpqa_combined/language_switching_analysis.json
 ```
 
 ## Why these exist
@@ -55,3 +81,4 @@ The core pipeline grades legibility with a single LLM call per sample. These scr
 - **Is the grader stable?** `regrade_legibility.py` + `compare_regrade.py` test whether re-running the same grader on the same inputs produces the same scores (grader drift).
 - **Is the model stable?** `compare_generations.py` tests whether re-running inference produces similar legibility distributions (generation drift).
 - **What drives the scores?** `categorize_legibility.py` + `plot_legibility_categories.py` extract and visualize the specific characteristics the grader cites in its explanations.
+- **Is language switching meaningful?** `analyze_language_switching.py` + `plot_language_switching.py` determine whether non-English segments in reasoning are contextually coherent code-switching or nonsensical output. `analyze_language_switching_mentions.py` cross-references grader mentions of language switching with actual detection.

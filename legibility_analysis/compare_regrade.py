@@ -17,10 +17,8 @@ RUNS = [
     "streamlit_runs/20251022_003910_R1-Distill-Qwen-32B_gpqa",
     "streamlit_runs/20251022_012813_R1-Distill-Qwen-14B_gpqa",
     "streamlit_runs/20251022_013133_R1-Distill-Qwen-14B_gpqa",
-    # "streamlit_runs/20251024_054931_R1-Zero_gpqa",
     "streamlit_runs/20251024_155133_R1-Distill-Qwen-14B_gpqa",
     "streamlit_runs/20251024_155559_R1-Distill-Qwen-32B_gpqa",
-    # "streamlit_runs/20251024_165858_R1-Zero_gpqa",
 ]
 
 
