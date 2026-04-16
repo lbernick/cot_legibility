@@ -13,15 +13,25 @@ from tqdm.auto import tqdm
 from src.evaluation.grader import Grader, grade_item, compute_statistics
 from src.utils.io import read_json, write_json
 
+REASONING_MODELS = {
+    "R1",
+    "o3-mini",
+    "qwq",
+    "R1-Distill-Llama-70B",
+    "R1-Distill-Qwen-32B",
+    "R1-Distill-Qwen-14B",
+}
+
 RUNS = [
-    "streamlit_runs/20251012_225607_R1_gpqa",
-    "streamlit_runs/20251014_190506_R1_gpqa",
-    "streamlit_runs/20251014_201056_R1_gpqa",
-    "streamlit_runs/20251022_003910_R1-Distill-Qwen-32B_gpqa",
-    "streamlit_runs/20251022_012813_R1-Distill-Qwen-14B_gpqa",
-    "streamlit_runs/20251022_013133_R1-Distill-Qwen-14B_gpqa",
-    "streamlit_runs/20251024_155133_R1-Distill-Qwen-14B_gpqa",
-    "streamlit_runs/20251024_155559_R1-Distill-Qwen-32B_gpqa",
+    # "streamlit_runs/20251012_225607_R1_gpqa",
+    # "streamlit_runs/20251014_190506_R1_gpqa",
+    # "streamlit_runs/20251014_201056_R1_gpqa",
+    # "streamlit_runs/20251022_003910_R1-Distill-Qwen-32B_gpqa",
+    # "streamlit_runs/20251022_012813_R1-Distill-Qwen-14B_gpqa",
+    # "streamlit_runs/20251022_013133_R1-Distill-Qwen-14B_gpqa",
+    # "streamlit_runs/20251024_155133_R1-Distill-Qwen-14B_gpqa",
+    # "streamlit_runs/20251024_155559_R1-Distill-Qwen-32B_gpqa",
+    "streamlit_runs/20260406_174237_qwq_gpqa"
 ]
 
 MAX_WORKERS = 20
@@ -108,7 +118,7 @@ def main():
     parser.add_argument(
         "--grader-models",
         nargs="+",
-        default=["gpt-4o", "claude-sonnet-4", "claude-haiku-4-5"],
+        default=["gpt-4o", "claude-sonnet-4-5", "o3-mini"],
     )
     parser.add_argument("filters", nargs="*", help="Substrings to filter RUNS")
     args = parser.parse_args()
@@ -122,6 +132,8 @@ def main():
         print(f"\n{'#' * 60}\nGrader model: {model_name}\n{'#' * 60}")
         eval_config = make_eval_config(model_name)
         grader = Grader(model_name)
+        if model_name in REASONING_MODELS:
+            grader.model_config["include_reasoning"] = True
         for run_dir in runs:
             regrade_run(run_dir, grader, eval_config)
 
