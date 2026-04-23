@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
+
 
 def plot_heatmap(data: dict, output_path: Path):
     scores = sorted(data["by_score"].keys(), key=int)
@@ -95,7 +97,8 @@ def main():
     args = parser.parse_args()
 
     counts_path = Path(args.counts_path)
-    output_dir = Path(args.output_dir) if args.output_dir else counts_path.parent
+    output_dir = Path(args.output_dir) if args.output_dir else PLOTS_DIR
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(counts_path) as f:
         data = json.load(f)

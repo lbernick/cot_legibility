@@ -151,6 +151,7 @@ def main():
     plot_histogram_per_model(model_scores)
 
 
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
 MODEL_ORDER = ["R1-Distill-Qwen-32B", "R1-Distill-Qwen-14B", "R1-Zero", "R1"]
 
 
@@ -166,7 +167,7 @@ def plot_scatter_per_model(model_scores: dict[str, tuple[list, list]]):
     models = [m for m in MODEL_ORDER if m in model_scores]
     rng = np.random.default_rng(42)
     jitter = 0.15
-    Path("plots").mkdir(exist_ok=True)
+    PLOTS_DIR.mkdir(exist_ok=True)
 
     for model in models:
         old = np.array(model_scores[model][0])
@@ -192,7 +193,7 @@ def plot_scatter_per_model(model_scores: dict[str, tuple[list, list]]):
         fig.tight_layout()
 
         slug = model.lower().replace(" ", "_")
-        out = f"plots/regrade_scatter_{slug}.png"
+        out = PLOTS_DIR / f"regrade_scatter_{slug}.png"
         fig.savefig(out, dpi=150)
         print(f"Scatter plot saved to {out}")
         plt.close(fig)
@@ -200,7 +201,7 @@ def plot_scatter_per_model(model_scores: dict[str, tuple[list, list]]):
 
 def plot_histogram_per_model(model_scores: dict[str, tuple[list, list]]):
     models = [m for m in MODEL_ORDER if m in model_scores]
-    Path("plots").mkdir(exist_ok=True)
+    PLOTS_DIR.mkdir(exist_ok=True)
     bins = np.arange(0.5, 10.5, 1)
 
     for model in models:
@@ -223,7 +224,7 @@ def plot_histogram_per_model(model_scores: dict[str, tuple[list, list]]):
         fig.tight_layout()
 
         slug = model.lower().replace(" ", "_")
-        out = f"plots/regrade_hist_{slug}.png"
+        out = PLOTS_DIR / f"regrade_hist_{slug}.png"
         fig.savefig(out, dpi=150)
         print(f"Histogram saved to {out}")
         plt.close(fig)

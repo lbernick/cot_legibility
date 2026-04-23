@@ -6,6 +6,8 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
+
 
 def plot_coherence_pie(data: dict, output_path: Path):
     results = [r for r in data["results"] if r.get("summary") != "error"]
@@ -61,7 +63,8 @@ def main():
     args = parser.parse_args()
 
     analysis_path = Path(args.analysis_path)
-    output_dir = Path(args.output_dir) if args.output_dir else analysis_path.parent
+    output_dir = Path(args.output_dir) if args.output_dir else PLOTS_DIR
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(analysis_path) as f:
         data = json.load(f)

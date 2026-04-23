@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 STREAMLIT_RUNS = Path(__file__).resolve().parent.parent / "streamlit_runs"
-OUTPUT_DIR = Path(__file__).resolve().parent / "qwq_gpqa_combined"
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
 
 # Grader explanation: mentions of repetition as a legibility factor
 # Strict: match "repetition", "repetitive phrasing/phrases", not "repeated corrections" etc.
@@ -182,7 +182,7 @@ def plot_grader_mention_vs_score(rows: list[dict], output_dir: Path):
 
 
 def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    PLOTS_DIR.mkdir(parents=True, exist_ok=True)
     rows = load_data()
     print(f"Loaded {len(rows)} samples")
     print(f"Grader cited repetition: {sum(r['grader_mentioned'] for r in rows)}")
@@ -195,9 +195,9 @@ def main():
     comp = [r["compression_ratio"] for r in rows]
     print(f"Compression ratio — mean: {np.mean(comp):.3f}, std: {np.std(comp):.3f}")
 
-    plot_ngram_vs_score(rows, OUTPUT_DIR)
-    plot_compression_vs_score(rows, OUTPUT_DIR)
-    plot_grader_mention_vs_score(rows, OUTPUT_DIR)
+    plot_ngram_vs_score(rows, PLOTS_DIR)
+    plot_compression_vs_score(rows, PLOTS_DIR)
+    plot_grader_mention_vs_score(rows, PLOTS_DIR)
 
 
 if __name__ == "__main__":

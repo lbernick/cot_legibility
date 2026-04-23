@@ -10,6 +10,8 @@ import numpy as np
 
 from src.utils.io import read_json
 
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
+
 MODELS = {
     "R1": {
         "original": [
@@ -92,8 +94,8 @@ def plot_model(model_name: str, original_dirs: list[str], new_dirs: list[str]):
     ax2.set_xticks(centers)
 
     fig.tight_layout()
-    Path("plots").mkdir(exist_ok=True)
-    out = f"plots/generation_compare_{model_name.lower()}.png"
+    PLOTS_DIR.mkdir(exist_ok=True)
+    out = PLOTS_DIR / f"generation_compare_{model_name.lower()}.png"
     fig.savefig(out, dpi=150)
     print(f"Saved {out}")
     plt.close(fig)

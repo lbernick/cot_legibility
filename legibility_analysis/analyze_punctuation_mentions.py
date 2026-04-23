@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 STREAMLIT_RUNS = Path(__file__).resolve().parent.parent / "streamlit_runs"
-OUTPUT_DIR = Path(__file__).resolve().parent / "qwq_gpqa_combined"
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
 
 # Grader explanation: mentions of punctuation or formatting issues
 GRADER_PUNCTUATION_RE = re.compile(
@@ -234,7 +234,7 @@ def plot_score_lift_by_anomalies(rows: list[dict], output_dir: Path):
 
 
 def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    PLOTS_DIR.mkdir(parents=True, exist_ok=True)
     rows = load_data()
     print(f"Loaded {len(rows)} samples")
     print(
@@ -242,9 +242,9 @@ def main():
     )
     print(f"Samples with anomalies: {sum(r['anomaly_count'] > 0 for r in rows)}")
 
-    plot_grader_vs_anomaly_count(rows, OUTPUT_DIR)
-    plot_grader_punct_vs_score(rows, OUTPUT_DIR)
-    plot_score_lift_by_anomalies(rows, OUTPUT_DIR)
+    plot_grader_vs_anomaly_count(rows, PLOTS_DIR)
+    plot_grader_punct_vs_score(rows, PLOTS_DIR)
+    plot_score_lift_by_anomalies(rows, PLOTS_DIR)
 
 
 if __name__ == "__main__":

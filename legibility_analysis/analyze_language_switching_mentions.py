@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 STREAMLIT_RUNS = Path(__file__).resolve().parent.parent / "streamlit_runs"
-OUTPUT_DIR = Path(__file__).resolve().parent / "qwq_gpqa_combined"
+PLOTS_DIR = Path(__file__).resolve().parent / "plots"
 
 # CJK unicode range (Chinese characters)
 CJK_RE = re.compile(r"[\u4e00-\u9fff\u3400-\u4dbf]")
@@ -234,15 +234,15 @@ def plot_score_lift_by_cjk(rows: list[dict], output_dir: Path):
 
 
 def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    PLOTS_DIR.mkdir(parents=True, exist_ok=True)
     rows = load_data()
     print(f"Loaded {len(rows)} samples")
     print(f"Language switching mentioned: {sum(r['lang_mentioned'] for r in rows)}")
     print(f"Samples with CJK: {sum(r['cjk_count'] > 0 for r in rows)}")
 
-    plot_lang_mention_vs_cjk(rows, OUTPUT_DIR)
-    plot_lang_mention_vs_score(rows, OUTPUT_DIR)
-    plot_score_lift_by_cjk(rows, OUTPUT_DIR)
+    plot_lang_mention_vs_cjk(rows, PLOTS_DIR)
+    plot_lang_mention_vs_score(rows, PLOTS_DIR)
+    plot_score_lift_by_cjk(rows, PLOTS_DIR)
 
 
 if __name__ == "__main__":
